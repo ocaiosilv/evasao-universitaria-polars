@@ -1,0 +1,7 @@
+# Ignorar todos os arquivos que começam com um ponto, exceto aqueles que já
+# estão sob controle de versão.
+.*
+!.editorconfig
+!.envrc
+!.github
+!.gitignore

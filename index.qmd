@@ -1,0 +1,51 @@
+---
+jupyter: python3
+---
+
+---
+title: Análise de Evasão Universitária usando Polars
+authors:
+  - name: Caio Aloísio Andrade Silva
+    affiliation: Universidade Federal de Sergipe
+    roles: writing
+    corresponding: true
+  - name: Gabriel Santos de Souza
+    affiliation: Universidade Federal de Sergipe
+    roles: writing
+    corresponding: true
+  - name: Lucca Pedreira Dultra
+    affiliation: Universidade Federal de Sergipe
+    roles: writing
+    corresponding: true
+  - name: Renato Vasconcelos Campos Filho
+    affiliation: Universidade Federal de Sergipe
+    roles: writing
+    corresponding: true
+  - name: Tarcísio Almeida Mascarenhas
+    affiliation: Universidade Federal de Sergipe
+    roles: writing
+    corresponding: true
+bibliography: references.bib
+csl: associacao-brasileira-de-normas-tecnicas-ufs.csl
+---
+
+# Seção
+
+Isso é uma seção com uma citação [@knuth84]. @knuth84 fala sobre *Literate Programming*.
+
+```{python}
+from ucimlrepo import fetch_ucirepo 
+  
+# fetch dataset 
+predict_students_dropout_and_academic_success = fetch_ucirepo(id=697) 
+  
+# data (as pandas dataframes) 
+X = predict_students_dropout_and_academic_success.data.features 
+y = predict_students_dropout_and_academic_success.data.targets 
+  
+# metadata 
+print(predict_students_dropout_and_academic_success.metadata) 
+  
+# variable information 
+print(predict_students_dropout_and_academic_success.variables) 
+```
