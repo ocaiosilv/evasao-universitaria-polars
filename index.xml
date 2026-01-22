@@ -322,7 +322,7 @@ Polars</article-title>
   1984</xref>). Knuth
   (<xref alt="1984" rid="ref-knuth84-nb-article" ref-type="bibr">1984</xref>) fala
   sobre <italic>Literate Programming</italic>.</p>
-  <sec id="cell-7e38d0ee-nb-article" specific-use="notebook-content">
+  <sec id="c72987ae-nb-article" specific-use="notebook-content">
   <code language="python">from ucimlrepo import fetch_ucirepo
 
 # fetch dataset
