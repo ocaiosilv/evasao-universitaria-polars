@@ -6,8 +6,8 @@
 !.github
 !.gitignore
 
-# Virtual environment.
-env
-
 # Adicionado automaticamente.
 .Rproj.user
+/env/
+/.quarto/
+**/*.quarto_ipynb
