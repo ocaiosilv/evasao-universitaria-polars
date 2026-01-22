@@ -6,7 +6,7 @@ on:
 name: Quarto Publish
 
 jobs:
-  deploy:
+  gh-pages:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -32,3 +32,16 @@ jobs:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  artifact:
+    needs: gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: "gh-pages"
+      - name: Upload Artifact
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4
+        with:
+          name: dist
+          path: index.pdf
