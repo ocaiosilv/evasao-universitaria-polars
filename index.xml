@@ -16,65 +16,50 @@ Polars</article-title>
 </title-group>
 
 <contrib-group>
-<contrib contrib-type="author" corresp="yes">
+<contrib contrib-type="author">
 <name>
 <surname>Silva</surname>
 <given-names>Caio Aloísio Andrade</given-names>
 </name>
 <string-name>Caio Aloísio Andrade Silva</string-name>
 
-<role vocab="https://credit.niso.org" vocab-term="writing – original
-draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
-<xref ref-type="corresp" rid="cor-1">&#x002A;</xref>
 </contrib>
-<contrib contrib-type="author" corresp="yes">
+<contrib contrib-type="author">
 <name>
 <surname>Souza</surname>
 <given-names>Gabriel Santos</given-names>
 </name>
 <string-name>Gabriel Santos de Souza</string-name>
 
-<role vocab="https://credit.niso.org" vocab-term="writing – original
-draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
-<xref ref-type="corresp" rid="cor-2">&#x002A;</xref>
 </contrib>
-<contrib contrib-type="author" corresp="yes">
+<contrib contrib-type="author">
 <name>
 <surname>Dultra</surname>
 <given-names>Lucca Pedreira</given-names>
 </name>
 <string-name>Lucca Pedreira Dultra</string-name>
 
-<role vocab="https://credit.niso.org" vocab-term="writing – original
-draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
-<xref ref-type="corresp" rid="cor-3">&#x002A;</xref>
 </contrib>
-<contrib contrib-type="author" corresp="yes">
+<contrib contrib-type="author">
 <name>
 <surname>Filho</surname>
 <given-names>Renato Vasconcelos Campos</given-names>
 </name>
 <string-name>Renato Vasconcelos Campos Filho</string-name>
 
-<role vocab="https://credit.niso.org" vocab-term="writing – original
-draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
-<xref ref-type="corresp" rid="cor-4">&#x002A;</xref>
 </contrib>
-<contrib contrib-type="author" corresp="yes">
+<contrib contrib-type="author">
 <name>
 <surname>Mascarenhas</surname>
 <given-names>Tarcísio Almeida</given-names>
 </name>
 <string-name>Tarcísio Almeida Mascarenhas</string-name>
 
-<role vocab="https://credit.niso.org" vocab-term="writing – original
-draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
-<xref ref-type="corresp" rid="cor-5">&#x002A;</xref>
 </contrib>
 </contrib-group>
 <aff id="aff-1">
@@ -89,13 +74,6 @@ draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-
 
 
 </aff>
-<author-notes>
-<corresp id="cor-1"></corresp>
-<corresp id="cor-2"></corresp>
-<corresp id="cor-3"></corresp>
-<corresp id="cor-4"></corresp>
-<corresp id="cor-5"></corresp>
-</author-notes>
 
 
 
@@ -117,17 +95,6 @@ draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-
 </front>
 
 <body>
-<p>title: Análise de Evasão Universitária usando Polars authors: - name:
-Caio Aloísio Andrade Silva affiliation: Universidade Federal de Sergipe
-roles: writing corresponding: true - name: Gabriel Santos de Souza
-affiliation: Universidade Federal de Sergipe roles: writing
-corresponding: true - name: Lucca Pedreira Dultra affiliation:
-Universidade Federal de Sergipe roles: writing corresponding: true -
-name: Renato Vasconcelos Campos Filho affiliation: Universidade Federal
-de Sergipe roles: writing corresponding: true - name: Tarcísio Almeida
-Mascarenhas affiliation: Universidade Federal de Sergipe roles: writing
-corresponding: true bibliography: references.bib csl:
-associacao-brasileira-de-normas-tecnicas-ufs.csl —</p>
 <sec id="seção">
   <title>Seção</title>
   <p>Isso é uma seção com uma citação
@@ -287,65 +254,50 @@ associacao-brasileira-de-normas-tecnicas-ufs.csl —</p>
 Polars</article-title>
 </title-group>
 <contrib-group>
-<contrib contrib-type="author" corresp="yes">
+<contrib contrib-type="author">
 <name>
 <surname>Silva</surname>
 <given-names>Caio Aloísio Andrade</given-names>
 </name>
 <string-name>Caio Aloísio Andrade Silva</string-name>
 
-<role vocab="https://credit.niso.org" vocab-term="writing – original
-draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
 <xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-<xref ref-type="corresp" rid="cor-1-nb-article">&#x002A;</xref>
 </contrib>
-<contrib contrib-type="author" corresp="yes">
+<contrib contrib-type="author">
 <name>
 <surname>Souza</surname>
 <given-names>Gabriel Santos</given-names>
 </name>
 <string-name>Gabriel Santos de Souza</string-name>
 
-<role vocab="https://credit.niso.org" vocab-term="writing – original
-draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
 <xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-<xref ref-type="corresp" rid="cor-2-nb-article">&#x002A;</xref>
 </contrib>
-<contrib contrib-type="author" corresp="yes">
+<contrib contrib-type="author">
 <name>
 <surname>Dultra</surname>
 <given-names>Lucca Pedreira</given-names>
 </name>
 <string-name>Lucca Pedreira Dultra</string-name>
 
-<role vocab="https://credit.niso.org" vocab-term="writing – original
-draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
 <xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-<xref ref-type="corresp" rid="cor-3-nb-article">&#x002A;</xref>
 </contrib>
-<contrib contrib-type="author" corresp="yes">
+<contrib contrib-type="author">
 <name>
 <surname>Filho</surname>
 <given-names>Renato Vasconcelos Campos</given-names>
 </name>
 <string-name>Renato Vasconcelos Campos Filho</string-name>
 
-<role vocab="https://credit.niso.org" vocab-term="writing – original
-draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
 <xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-<xref ref-type="corresp" rid="cor-4-nb-article">&#x002A;</xref>
 </contrib>
-<contrib contrib-type="author" corresp="yes">
+<contrib contrib-type="author">
 <name>
 <surname>Mascarenhas</surname>
 <given-names>Tarcísio Almeida</given-names>
 </name>
 <string-name>Tarcísio Almeida Mascarenhas</string-name>
 
-<role vocab="https://credit.niso.org" vocab-term="writing – original
-draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
 <xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-<xref ref-type="corresp" rid="cor-5-nb-article">&#x002A;</xref>
 </contrib>
 </contrib-group>
 <aff id="aff-1-nb-article">
@@ -360,28 +312,9 @@ draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-
 
 
 </aff>
-<author-notes>
-<corresp id="cor-1-nb-article"></corresp>
-<corresp id="cor-2-nb-article"></corresp>
-<corresp id="cor-3-nb-article"></corresp>
-<corresp id="cor-4-nb-article"></corresp>
-<corresp id="cor-5-nb-article"></corresp>
-</author-notes>
 </front-stub>
 
 <body>
-<sec id="ac0bd2f8-nb-article" specific-use="notebook-content">
-<p>title: Análise de Evasão Universitária usando Polars authors: - name:
-Caio Aloísio Andrade Silva affiliation: Universidade Federal de Sergipe
-roles: writing corresponding: true - name: Gabriel Santos de Souza
-affiliation: Universidade Federal de Sergipe roles: writing
-corresponding: true - name: Lucca Pedreira Dultra affiliation:
-Universidade Federal de Sergipe roles: writing corresponding: true -
-name: Renato Vasconcelos Campos Filho affiliation: Universidade Federal
-de Sergipe roles: writing corresponding: true - name: Tarcísio Almeida
-Mascarenhas affiliation: Universidade Federal de Sergipe roles: writing
-corresponding: true bibliography: references.bib csl:
-associacao-brasileira-de-normas-tecnicas-ufs.csl —</p>
 <sec id="seção-nb-article">
   <title>Seção</title>
   <p>Isso é uma seção com uma citação
@@ -389,8 +322,7 @@ associacao-brasileira-de-normas-tecnicas-ufs.csl —</p>
   1984</xref>). Knuth
   (<xref alt="1984" rid="ref-knuth84-nb-article" ref-type="bibr">1984</xref>) fala
   sobre <italic>Literate Programming</italic>.</p>
-  </sec>
-  <sec id="cell-4dc5c866-nb-article" specific-use="notebook-content">
+  <sec id="cell-965fc438-nb-article" specific-use="notebook-content">
   <code language="python">from ucimlrepo import fetch_ucirepo
 
 # fetch dataset

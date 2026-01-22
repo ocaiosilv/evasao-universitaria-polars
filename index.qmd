@@ -1,32 +1,19 @@
 ---
-jupyter: python3
----
-
----
-title: Análise de Evasão Universitária usando Polars
-authors:
+author:
   - name: Caio Aloísio Andrade Silva
     affiliation: Universidade Federal de Sergipe
-    roles: writing
-    corresponding: true
   - name: Gabriel Santos de Souza
     affiliation: Universidade Federal de Sergipe
-    roles: writing
-    corresponding: true
   - name: Lucca Pedreira Dultra
     affiliation: Universidade Federal de Sergipe
-    roles: writing
-    corresponding: true
   - name: Renato Vasconcelos Campos Filho
     affiliation: Universidade Federal de Sergipe
-    roles: writing
-    corresponding: true
   - name: Tarcísio Almeida Mascarenhas
     affiliation: Universidade Federal de Sergipe
-    roles: writing
-    corresponding: true
 bibliography: references.bib
 csl: associacao-brasileira-de-normas-tecnicas-ufs.csl
+jupyter: python3
+title: Análise de Evasão Universitária usando Polars
 ---
 
 # Seção
