@@ -1,0 +1,32 @@
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+name: Quarto Publish
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Set Up Quarto
+        uses: quarto-dev/quarto-actions/setup@8a96df13519ee81fd526f2dfca5962811136661b
+      - name: Install Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.14"
+          cache: "pip"
+      - name: Install Dependencies
+        run: |
+          pip install jupyter
+          pip install -r requirements.txt
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@8a96df13519ee81fd526f2dfca5962811136661b
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
