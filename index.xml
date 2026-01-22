@@ -230,11 +230,11 @@ Polars</article-title>
       <person-group person-group-type="author">
         <name><surname>Knuth</surname><given-names>Donald E.</given-names></name>
       </person-group>
-      <article-title>Literate programming</article-title>
+      <article-title>Literate Programming</article-title>
       <source>Comput. J.</source>
       <publisher-name>Oxford University Press, Inc.</publisher-name>
       <publisher-loc>USA</publisher-loc>
-      <year iso-8601-date="1984-05">1984</year><month>05</month>
+      <year iso-8601-date="1984">1984</year>
       <volume>27</volume>
       <issue>2</issue>
       <issn>0010-4620</issn>
@@ -322,7 +322,7 @@ Polars</article-title>
   1984</xref>). Knuth
   (<xref alt="1984" rid="ref-knuth84-nb-article" ref-type="bibr">1984</xref>) fala
   sobre <italic>Literate Programming</italic>.</p>
-  <sec id="bcdc1c76-nb-article" specific-use="notebook-content">
+  <sec id="cell-3e8c1fde-nb-article" specific-use="notebook-content">
   <code language="python">from ucimlrepo import fetch_ucirepo
 
 # fetch dataset
@@ -457,7 +457,7 @@ print(predict_students_dropout_and_academic_success.variables)</code>
 36             no  </preformat>
   </boxed-text>
   </sec>
-  <sec id="cell-395e3960-nb-article" specific-use="notebook-content">
+  <sec id="e8a7197d-nb-article" specific-use="notebook-content">
 </sec>
 <sec id="referências-nb-article">
   <title>Referências</title>
@@ -475,11 +475,11 @@ print(predict_students_dropout_and_academic_success.variables)</code>
       <person-group person-group-type="author">
         <name><surname>Knuth</surname><given-names>Donald E.</given-names></name>
       </person-group>
-      <article-title>Literate programming</article-title>
+      <article-title>Literate Programming</article-title>
       <source>Comput. J.</source>
       <publisher-name>Oxford University Press, Inc.</publisher-name>
       <publisher-loc>USA</publisher-loc>
-      <year iso-8601-date="1984-05">1984</year><month>05</month>
+      <year iso-8601-date="1984">1984</year>
       <volume>27</volume>
       <issue>2</issue>
       <issn>0010-4620</issn>
