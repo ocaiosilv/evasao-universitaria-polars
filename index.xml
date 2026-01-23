@@ -320,7 +320,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   1984</xref>). Knuth
   (<xref alt="1984" rid="ref-knuth84-nb-article" ref-type="bibr">1984</xref>) fala
   sobre <italic>Literate Programming</italic>.</p>
-  <sec id="cell-5d6fd739-nb-article" specific-use="notebook-content">
+  <sec id="cell-74fa91b5-nb-article" specific-use="notebook-content">
   <code language="python">from ucimlrepo import fetch_ucirepo
 
 # fetch dataset
@@ -455,7 +455,7 @@ print(predict_students_dropout_and_academic_success.variables)</code>
 36             no  </preformat>
   </boxed-text>
   </sec>
-  <sec id="cell-9aa74cc1-nb-article" specific-use="notebook-content">
+  <sec id="cell-471de680-nb-article" specific-use="notebook-content">
 </sec>
 <sec id="referências-nb-article">
   <title>Referências</title>
