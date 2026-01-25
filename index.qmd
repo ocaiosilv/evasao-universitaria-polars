@@ -53,3 +53,8 @@ O dataset utilizado, *Predict Students' Dropout and Academic Success* tem como o
 ## Conclusão
 
 ## Relato Pessoal
+
+## Referências
+
+::: {#refs}
+:::
