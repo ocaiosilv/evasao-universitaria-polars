@@ -8,8 +8,7 @@
 !.python-version
 
 # Arquivos gerados pelo Quarto.
-_freeze
-_manuscript
+_*
 index-preview.html
 site_libs
 *.aux
