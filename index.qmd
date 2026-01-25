@@ -14,10 +14,14 @@ bibliography: references.bib
 csl: associacao-brasileira-de-normas-tecnicas-ufs.csl
 jupyter: python3
 lang: pt
+# Coloca todas as entradas na referência independente de se foram citadas ou
+# não.
+nocite: |
+  @*
 title: Análise de Evasão Universitária
 ---
 
-# Seção
+## Seção
 
 Isso é uma seção com uma citação [@knuth84]. @knuth84 fala sobre *Literate Programming*.
 
@@ -37,8 +41,3 @@ print(predict_students_dropout_and_academic_success.metadata)
 # variable information
 print(predict_students_dropout_and_academic_success.variables)
 ```
-
-# Referências
-
-::: {#refs}
-:::

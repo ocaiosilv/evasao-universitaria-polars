@@ -223,7 +223,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 <back>
 <ref-list>
-  <title>Referências</title>
+  <title></title>
   <ref id="ref-knuth84">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -241,6 +241,85 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <pub-id pub-id-type="doi">10.1093/comjnl/27.2.97</pub-id>
       <fpage>97</fpage>
       <lpage>111</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-valentimrealinhoPredictStudentsDropout2021">
+    <element-citation publication-type="dataset">
+      <person-group person-group-type="author">
+        <name><surname>Valentim Realinho</surname><given-names>Mónica Vieira Martins</given-names></name>
+      </person-group>
+      <article-title>Predict Students’ Dropout and Academic Success</article-title>
+      <publisher-name>UCI Machine Learning Repository</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2026-01-15">2026</year><month>01</month><day>15</day></date-in-citation>
+      <uri>https://archive.ics.uci.edu/dataset/697</uri>
+      <pub-id pub-id-type="doi">10.24432/C5MC89</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-git">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Torvalds</surname><given-names>Linus</given-names></name>
+        <name><surname>Hamano</surname><given-names>Junio C.</given-names></name>
+        <string-name>Git contributors</string-name>
+      </person-group>
+      <article-title>Git: Distributed Version Control System</article-title>
+      <year iso-8601-date="2025-11-17">2025</year><month>11</month><day>17</day>
+      <uri>https://git-scm.com</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-github">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <string-name>GitHub, Inc.</string-name>
+      </person-group>
+      <article-title>GitHub</article-title>
+      <year iso-8601-date="2026">2026</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2026-01-25">2026</year><month>01</month><day>25</day></date-in-citation>
+      <uri>https://github.com</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-python">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <string-name>Python Software Foundation</string-name>
+      </person-group>
+      <article-title>Python Language Reference</article-title>
+      <year iso-8601-date="2025-12-05">2025</year><month>12</month><day>05</day>
+      <uri>https://www.python.org</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-quarto">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Allaire</surname><given-names>J. J.</given-names></name>
+        <name><surname>Teague</surname><given-names>Charles</given-names></name>
+        <name><surname>Scheidegger</surname><given-names>Carlos</given-names></name>
+        <name><surname>Xie</surname><given-names>Yihui</given-names></name>
+        <name><surname>Dervieux</surname><given-names>Christophe</given-names></name>
+      </person-group>
+      <article-title>Quarto</article-title>
+      <publisher-name>Posit Software, PBC</publisher-name>
+      <year iso-8601-date="2026-01-16">2026</year><month>01</month><day>16</day>
+      <uri>https://quarto.org</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-editorconfig">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <string-name>EditorConfig Team</string-name>
+      </person-group>
+      <article-title>EditorConfig: A file format and collection of text editor plugins for maintaining consistent coding styles</article-title>
+      <year iso-8601-date="2026">2026</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2026-01-25">2026</year><month>01</month><day>25</day></date-in-citation>
+      <uri>https://editorconfig.org</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-UcimlrepoPackageEasily">
+    <element-citation publication-type="software">
+      <article-title>Ucimlrepo: Package to Easily Import Datasets from the UC Irvine Machine Learning Repository into Scripts and Notebooks.</article-title>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2026-01-25">2026</year><month>01</month><day>25</day></date-in-citation>
+      <uri>https://github.com/uci-ml-repo/ucimlrepo/tree/main</uri>
     </element-citation>
   </ref>
 </ref-list>
@@ -320,7 +399,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   1984</xref>). Knuth
   (<xref alt="1984" rid="ref-knuth84-nb-article" ref-type="bibr">1984</xref>) fala
   sobre <italic>Literate Programming</italic>.</p>
-  <sec id="cell-74fa91b5-nb-article" specific-use="notebook-content">
+  <sec id="cell-2dc1b912-nb-article" specific-use="notebook-content">
   <code language="python">from ucimlrepo import fetch_ucirepo
 
 # fetch dataset
@@ -455,11 +534,6 @@ print(predict_students_dropout_and_academic_success.variables)</code>
 36             no  </preformat>
   </boxed-text>
   </sec>
-  <sec id="cell-471de680-nb-article" specific-use="notebook-content">
-</sec>
-<sec id="referências-nb-article">
-  <title>Referências</title>
-  </sec>
 </sec>
 </body>
 
@@ -485,6 +559,85 @@ print(predict_students_dropout_and_academic_success.variables)</code>
       <pub-id pub-id-type="doi">10.1093/comjnl/27.2.97</pub-id>
       <fpage>97</fpage>
       <lpage>111</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-valentimrealinhoPredictStudentsDropout2021-nb-article">
+    <element-citation publication-type="dataset">
+      <person-group person-group-type="author">
+        <name><surname>Valentim Realinho</surname><given-names>Mónica Vieira Martins</given-names></name>
+      </person-group>
+      <article-title>Predict Students’ Dropout and Academic Success</article-title>
+      <publisher-name>UCI Machine Learning Repository</publisher-name>
+      <year iso-8601-date="2021">2021</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2026-01-15">2026</year><month>01</month><day>15</day></date-in-citation>
+      <uri>https://archive.ics.uci.edu/dataset/697</uri>
+      <pub-id pub-id-type="doi">10.24432/C5MC89</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-git-nb-article">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Torvalds</surname><given-names>Linus</given-names></name>
+        <name><surname>Hamano</surname><given-names>Junio C.</given-names></name>
+        <string-name>Git contributors</string-name>
+      </person-group>
+      <article-title>Git: Distributed Version Control System</article-title>
+      <year iso-8601-date="2025-11-17">2025</year><month>11</month><day>17</day>
+      <uri>https://git-scm.com</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-github-nb-article">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <string-name>GitHub, Inc.</string-name>
+      </person-group>
+      <article-title>GitHub</article-title>
+      <year iso-8601-date="2026">2026</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2026-01-25">2026</year><month>01</month><day>25</day></date-in-citation>
+      <uri>https://github.com</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-python-nb-article">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <string-name>Python Software Foundation</string-name>
+      </person-group>
+      <article-title>Python Language Reference</article-title>
+      <year iso-8601-date="2025-12-05">2025</year><month>12</month><day>05</day>
+      <uri>https://www.python.org</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-quarto-nb-article">
+    <element-citation publication-type="software">
+      <person-group person-group-type="author">
+        <name><surname>Allaire</surname><given-names>J. J.</given-names></name>
+        <name><surname>Teague</surname><given-names>Charles</given-names></name>
+        <name><surname>Scheidegger</surname><given-names>Carlos</given-names></name>
+        <name><surname>Xie</surname><given-names>Yihui</given-names></name>
+        <name><surname>Dervieux</surname><given-names>Christophe</given-names></name>
+      </person-group>
+      <article-title>Quarto</article-title>
+      <publisher-name>Posit Software, PBC</publisher-name>
+      <year iso-8601-date="2026-01-16">2026</year><month>01</month><day>16</day>
+      <uri>https://quarto.org</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-editorconfig-nb-article">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <string-name>EditorConfig Team</string-name>
+      </person-group>
+      <article-title>EditorConfig: A file format and collection of text editor plugins for maintaining consistent coding styles</article-title>
+      <year iso-8601-date="2026">2026</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2026-01-25">2026</year><month>01</month><day>25</day></date-in-citation>
+      <uri>https://editorconfig.org</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-UcimlrepoPackageEasily-nb-article">
+    <element-citation publication-type="software">
+      <article-title>Ucimlrepo: Package to Easily Import Datasets from the UC Irvine Machine Learning Repository into Scripts and Notebooks.</article-title>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2026-01-25">2026</year><month>01</month><day>25</day></date-in-citation>
+      <uri>https://github.com/uci-ml-repo/ucimlrepo/tree/main</uri>
     </element-citation>
   </ref>
 </ref-list>
