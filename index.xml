@@ -94,8 +94,8 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </front>
 
 <body>
-<sec id="seção">
-  <title>Seção</title>
+<sec id="introdução">
+  <title>Introdução</title>
   <p>Isso é uma seção com uma citação
   (<xref alt="Knuth, 1984" rid="ref-knuth84" ref-type="bibr">Knuth,
   1984</xref>). Knuth
@@ -219,11 +219,34 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 35             no  
 36             no  </preformat>
 </sec>
+<sec id="objetivo">
+  <title>Objetivo</title>
+</sec>
+<sec id="materiais-e-métodos">
+  <title>Materiais e Métodos</title>
+  <p>O dataset utilizado, <italic>Predict Students’ Dropout and Academic
+  Success</italic> tem como origem o Instituto Politécnico de Portalegre
+  (PP), de Portugal
+  (<xref alt="Martins et al., 2021, p. 167" rid="ref-martinsEarlyPredictionStudents2021" ref-type="bibr">Martins
+  <italic>et al.</italic>, 2021, p. 167</xref>). Os dados foram
+  coletados desde 2008 até 2019
+  (<xref alt="Martins et al., 2021, p. 168" rid="ref-martinsEarlyPredictionStudents2021" ref-type="bibr">Martins
+  <italic>et al.</italic>, 2021, p. 168</xref>). Foi selecionado devido
+  à relevância acadêmia e por não ter valores faltando em nenhuma das
+  colunas, facilitando o processo de tratamento para a análise dos
+  dados.</p>
+</sec>
+<sec id="resultados">
+  <title>Resultados</title>
+</sec>
+<sec id="conclusão">
+  <title>Conclusão</title>
+</sec>
 </body>
 
 <back>
 <ref-list>
-  <title></title>
+  <title>Relato Pessoal</title>
   <ref id="ref-knuth84">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -322,6 +345,36 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
       <uri>https://github.com/uci-ml-repo/ucimlrepo/tree/main</uri>
     </element-citation>
   </ref>
+  <ref id="ref-martinsEarlyPredictionStudents2021">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Martins</surname><given-names>Mónica V.</given-names></name>
+        <name><surname>Tolledo</surname><given-names>Daniel</given-names></name>
+        <name><surname>Machado</surname><given-names>Jorge</given-names></name>
+        <name><surname>Baptista</surname><given-names>Luís M. T.</given-names></name>
+        <name><surname>Realinho</surname><given-names>Valentim</given-names></name>
+      </person-group>
+      <article-title>Early Prediction of Student’s Performance in Higher Education: A Case Study</article-title>
+      <source>Trends and Applications in Information Systems and Technologies</source>
+      <person-group person-group-type="editor">
+        <name><surname>Rocha</surname><given-names>Álvaro</given-names></name>
+        <name><surname>Adeli</surname><given-names>Hojjat</given-names></name>
+        <name><surname>Dzemyda</surname><given-names>Gintautas</given-names></name>
+        <name><surname>Moreira</surname><given-names>Fernando</given-names></name>
+        <name><surname>Ramalho Correia</surname><given-names>Ana Maria</given-names></name>
+      </person-group>
+      <publisher-name>Springer International Publishing</publisher-name>
+      <publisher-loc>Cham</publisher-loc>
+      <year iso-8601-date="2021">2021</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2026-01-15">2026</year><month>01</month><day>15</day></date-in-citation>
+      <volume>1365</volume>
+      <isbn>978-3-030-72656-0 978-3-030-72657-7</isbn>
+      <uri>https://link.springer.com/10.1007/978-3-030-72657-7_16</uri>
+      <pub-id pub-id-type="doi">10.1007/978-3-030-72657-7_16</pub-id>
+      <fpage>166</fpage>
+      <lpage>175</lpage>
+    </element-citation>
+  </ref>
 </ref-list>
 </back>
 
@@ -392,14 +445,14 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 </front-stub>
 
 <body>
-<sec id="seção-nb-article">
-  <title>Seção</title>
+<sec id="introdução-nb-article">
+  <title>Introdução</title>
   <p>Isso é uma seção com uma citação
   (<xref alt="Knuth, 1984" rid="ref-knuth84-nb-article" ref-type="bibr">Knuth,
   1984</xref>). Knuth
   (<xref alt="1984" rid="ref-knuth84-nb-article" ref-type="bibr">1984</xref>) fala
   sobre <italic>Literate Programming</italic>.</p>
-  <sec id="cell-2dc1b912-nb-article" specific-use="notebook-content">
+  <sec id="ac0ba65a-nb-article" specific-use="notebook-content">
   <code language="python">from ucimlrepo import fetch_ucirepo
 
 # fetch dataset
@@ -534,6 +587,34 @@ print(predict_students_dropout_and_academic_success.variables)</code>
 36             no  </preformat>
   </boxed-text>
   </sec>
+  <sec id="e13d806a-nb-article" specific-use="notebook-content">
+</sec>
+<sec id="objetivo-nb-article">
+  <title>Objetivo</title>
+</sec>
+<sec id="materiais-e-métodos-nb-article">
+  <title>Materiais e Métodos</title>
+  <p>O dataset utilizado, <italic>Predict Students’ Dropout and Academic
+  Success</italic> tem como origem o Instituto Politécnico de Portalegre
+  (PP), de Portugal
+  (<xref alt="Martins et al., 2021, p. 167" rid="ref-martinsEarlyPredictionStudents2021-nb-article" ref-type="bibr">Martins
+  <italic>et al.</italic>, 2021, p. 167</xref>). Os dados foram
+  coletados desde 2008 até 2019
+  (<xref alt="Martins et al., 2021, p. 168" rid="ref-martinsEarlyPredictionStudents2021-nb-article" ref-type="bibr">Martins
+  <italic>et al.</italic>, 2021, p. 168</xref>). Foi selecionado devido
+  à relevância acadêmia e por não ter valores faltando em nenhuma das
+  colunas, facilitando o processo de tratamento para a análise dos
+  dados.</p>
+</sec>
+<sec id="resultados-nb-article">
+  <title>Resultados</title>
+</sec>
+<sec id="conclusão-nb-article">
+  <title>Conclusão</title>
+</sec>
+<sec id="relato-pessoal-nb-article">
+  <title>Relato Pessoal</title>
+  </sec>
 </sec>
 </body>
 
@@ -638,6 +719,36 @@ print(predict_students_dropout_and_academic_success.variables)</code>
       <article-title>Ucimlrepo: Package to Easily Import Datasets from the UC Irvine Machine Learning Repository into Scripts and Notebooks.</article-title>
       <date-in-citation content-type="access-date"><year iso-8601-date="2026-01-25">2026</year><month>01</month><day>25</day></date-in-citation>
       <uri>https://github.com/uci-ml-repo/ucimlrepo/tree/main</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-martinsEarlyPredictionStudents2021-nb-article">
+    <element-citation publication-type="chapter">
+      <person-group person-group-type="author">
+        <name><surname>Martins</surname><given-names>Mónica V.</given-names></name>
+        <name><surname>Tolledo</surname><given-names>Daniel</given-names></name>
+        <name><surname>Machado</surname><given-names>Jorge</given-names></name>
+        <name><surname>Baptista</surname><given-names>Luís M. T.</given-names></name>
+        <name><surname>Realinho</surname><given-names>Valentim</given-names></name>
+      </person-group>
+      <article-title>Early Prediction of Student’s Performance in Higher Education: A Case Study</article-title>
+      <source>Trends and Applications in Information Systems and Technologies</source>
+      <person-group person-group-type="editor">
+        <name><surname>Rocha</surname><given-names>Álvaro</given-names></name>
+        <name><surname>Adeli</surname><given-names>Hojjat</given-names></name>
+        <name><surname>Dzemyda</surname><given-names>Gintautas</given-names></name>
+        <name><surname>Moreira</surname><given-names>Fernando</given-names></name>
+        <name><surname>Ramalho Correia</surname><given-names>Ana Maria</given-names></name>
+      </person-group>
+      <publisher-name>Springer International Publishing</publisher-name>
+      <publisher-loc>Cham</publisher-loc>
+      <year iso-8601-date="2021">2021</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2026-01-15">2026</year><month>01</month><day>15</day></date-in-citation>
+      <volume>1365</volume>
+      <isbn>978-3-030-72656-0 978-3-030-72657-7</isbn>
+      <uri>https://link.springer.com/10.1007/978-3-030-72657-7_16</uri>
+      <pub-id pub-id-type="doi">10.1007/978-3-030-72657-7_16</pub-id>
+      <fpage>166</fpage>
+      <lpage>175</lpage>
     </element-citation>
   </ref>
 </ref-list>

@@ -21,7 +21,7 @@ nocite: |
 title: Análise de Evasão Universitária
 ---
 
-## Seção
+## Introdução
 
 Isso é uma seção com uma citação [@knuth84]. @knuth84 fala sobre *Literate Programming*.
 
@@ -41,3 +41,15 @@ print(predict_students_dropout_and_academic_success.metadata)
 # variable information
 print(predict_students_dropout_and_academic_success.variables)
 ```
+
+## Objetivo
+
+## Materiais e Métodos
+
+O dataset utilizado, *Predict Students' Dropout and Academic Success* tem como origem o Instituto Politécnico de Portalegre (PP), de Portugal [@martinsEarlyPredictionStudents2021, p. 167]. Os dados foram coletados desde 2008 até 2019 [@martinsEarlyPredictionStudents2021, p. 168]. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados.
+
+## Resultados
+
+## Conclusão
+
+## Relato Pessoal
