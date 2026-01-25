@@ -17,7 +17,7 @@ lang: pt
 title: Análise de Evasão Universitária
 ---
 
-# Seção
+## Seção
 
 Isso é uma seção com uma citação [@knuth84]. @knuth84 fala sobre *Literate Programming*.
 
