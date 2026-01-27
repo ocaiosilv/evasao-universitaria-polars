@@ -3,6 +3,17 @@ format: html
 title: Análise de Evasão Universitária
 ---
 
+```{python}
+#| include: false
+#| label: imports
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+from ucimlrepo import fetch_ucirepo
+```
+
 ## Introdução
 
 A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Compreender os fatores que levam um aluno a abandonar o curso ou a obter sucesso acadêmico é fundamental para a elaboração de políticas de retenção e suporte educacional mais eficazes.
@@ -29,8 +40,6 @@ O dataset utilizado, *Predict Students' Dropout and Academic Success* tem como o
 ```{python}
 #| include: false
 
-from ucimlrepo import fetch_ucirepo
-
 # Baixando o Dataset.
 ds = fetch_ucirepo(id=697)
 
@@ -41,9 +50,6 @@ df = ds.data.features
 ```{python}
 #| label: tbl-variaveis
 #| tbl-cap: "Dicionário das Variáveis"
-
-import numpy as np
-import pandas as pd
 
 def classificar_variavel(coluna):
     """
@@ -110,8 +116,6 @@ descritiva.to_frame().style.format("{:.2f}")
 ```{python}
 #| label: fig-boxplot-notas
 #| fig-cap: "Distribuição das Notas (Identificando Outliers)"
-
-import matplotlib.pyplot as plt
 
 plt.figure(figsize=(8, 4))
 plt.boxplot(df['Previous qualification (grade)'], vert=False, patch_artist=True)
