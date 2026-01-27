@@ -1,13 +1,35 @@
 ---
-format:
-  html: default
+title: "Análise da Evasão Universitária"
+title-block: false
+format: html
 ---
+
 
 ## Introdução
 
-Isso é uma seção com uma citação [@knuth84]. @knuth84 fala sobre *Literate Programming*.
+A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Compreender os fatores que levam um aluno a abandonar o curso ou a obter sucesso acadêmico é fundamental para a elaboração de políticas de retenção e suporte educacional mais eficazes.
+
+Neste trabalho, investigamos o problema da desistência no ensino superior utilizando dados reais. A análise se justifica pela necessidade de identificar padrões ocultos que possam sinalizar, precocemente, estudantes em situação de risco.
+
+Para isso, utilizamos o conjunto de dados *Predict Students' Dropout and Academic Success*, disponibilizado pelo UCI Machine Learning Repository. Os dados provêm de uma instituição de ensino superior (Politécnico de Portalegre, Portugal) e englobam diversas dimensões da vida estudantil, incluindo fatores demográficos, socioeconômicos e de desempenho acadêmico prévio. A natureza dos dados é mista, contendo variáveis qualitativas (como estado civil e curso) e quantitativas (como notas e idade), permitindo uma análise estatística rica e multifacetada.
+
+## Objetivo
+
+O objetivo principal deste trabalho é aplicar técnicas de estatística descritiva para caracterizar o perfil dos estudantes e identificar variáveis potencialmente associadas à evasão escolar.
+
+Para alcançar este propósito, definiram-se os seguintes objetivos específicos:
+
+1.  **Resumir e Organizar:** Sintetizar as variáveis quantitativas do conjunto de dados, calculando medidas de tendência central (média, mediana) e dispersão (desvio padrão) para as notas de qualificação prévia.
+2.  **Visualizar:** Construir representações gráficas, como histogramas e boxplots, para facilitar a interpretação da distribuição das idades e notas dos alunos.
+3.  **Identificar Anomalias:** Detectar a presença de *outliers* (valores atípicos) nas notas de ingresso, investigando a existência de grupos com desempenho discrepante da maioria.
+4.  **Caracterizar:** Descrever a natureza das variáveis disponíveis no banco de dados, classificando-as conforme seus tipos e escalas para fundamentar a escolha das técnicas estatísticas aplicadas.
+
+## Materiais e Métodos
+
+O dataset utilizado, *Predict Students' Dropout and Academic Success* tem como origem o Instituto Politécnico de Portalegre (PP), de Portugal [@martinsEarlyPredictionStudents2021, p. 167]. Os dados foram coletados desde 2008 até 2019 [@martinsEarlyPredictionStudents2021, p. 168]. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados.
 
 ```{python}
+#| include: false
 from ucimlrepo import fetch_ucirepo
 
 # fetch dataset
@@ -18,19 +40,51 @@ X = predict_students_dropout_and_academic_success.data.features
 y = predict_students_dropout_and_academic_success.data.targets
 
 # metadata
-print(predict_students_dropout_and_academic_success.metadata)
-
-# variable information
-print(predict_students_dropout_and_academic_success.variables)
+# print(predict_students_dropout_and_academic_success.metadata)
 ```
 
-## Objetivo
+```{python}
+#| label: tbl-variaveis
+#| tbl-cap: "Dicionário das Variáveis"
+#| echo: false
 
-## Materiais e Métodos
-
-O dataset utilizado, *Predict Students' Dropout and Academic Success* tem como origem o Instituto Politécnico de Portalegre (PP), de Portugal [@martinsEarlyPredictionStudents2021, p. 167]. Os dados foram coletados desde 2008 até 2019 [@martinsEarlyPredictionStudents2021, p. 168]. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados.
+predict_students_dropout_and_academic_success.variables.style.hide()
+```
 
 ## Resultados
+
+```{python}
+#| label: tbl-estatisticas
+#| tbl-cap: "Estatísticas Descritivas das Notas"
+
+# Definindo o df
+df = predict_students_dropout_and_academic_success.data.features
+
+# Calculando as estatísticas
+descritiva = df['Previous qualification (grade)'].describe()
+
+# Mostrando a tabela formatada
+descritiva.to_frame().style.format("{:.2f}")
+```
+
+```{python}
+#| label: fig-boxplot-notas
+#| fig-cap: "Distribuição das Notas (Identificando Outliers)"
+
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(8, 4))
+plt.boxplot(df['Previous qualification (grade)'], vert=False, patch_artist=True)
+plt.title('Boxplot: Notas de Qualificação Prévia')
+plt.xlabel('Nota')
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.show()
+```
+### Análise dos Resultados
+
+Com base na **Tabela 1**, observamos que a nota média de qualificação prévia dos alunos é de aproximadamente **132.6 pontos**, com uma mediana muito próxima (**133.1**), o que indica uma distribuição relativamente simétrica.
+
+Entretanto, o **Boxplot (Figura 1)** revela a presença clara de **outliers** (valores atípicos). Notamos um grupo de alunos com notas excepcionalmente altas (acima de 160) e outro com notas muito baixas (abaixo de 100). Esses pontos discrepantes sugerem que o nível de preparo prévio dos alunos é bastante heterogêneo.
 
 ## Conclusão
 

@@ -12,7 +12,7 @@
 <meta name="author" content="Renato Vasconcelos Campos Filho">
 <meta name="author" content="Tarcísio Almeida Mascarenhas">
 
-<title>Objetivo</title>
+<title>Análise da Evasão Universitária</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -48,7 +48,7 @@ div.csl-indent {
 }</style>
 
 
-<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -60,9 +60,15 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-0a61af393cc41664e89a7addda21b354.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<meta name="citation_title" content="Objetivo">
+<meta name="citation_title" content="Análise da Evasão Universitária">
 <meta name="citation_author" content="Caio Aloísio Andrade Silva">
 <meta name="citation_author" content="Gabriel Santos de Souza">
 <meta name="citation_author" content="Lucca Pedreira Dultra">
@@ -85,7 +91,7 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Objetivo</h1>
+      <h1 class="title">Análise da Evasão Universitária</h1>
           </div>
 
     
@@ -159,8 +165,12 @@ div.csl-indent {
    
   <ul>
   <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a></li>
   <li><a href="#materiais-e-métodos" id="toc-materiais-e-métodos" class="nav-link" data-scroll-target="#materiais-e-métodos">Materiais e Métodos</a></li>
-  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">Resultados</a></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">Resultados</a>
+  <ul class="collapse">
+  <li><a href="#análise-dos-resultados" id="toc-análise-dos-resultados" class="nav-link" data-scroll-target="#análise-dos-resultados">Análise dos Resultados</a></li>
+  </ul></li>
   <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão">Conclusão</a></li>
   <li><a href="#relato-pessoal" id="toc-relato-pessoal" class="nav-link" data-scroll-target="#relato-pessoal">Relato Pessoal</a></li>
   <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências">Referências</a></li>
@@ -178,135 +188,468 @@ div.csl-indent {
 
 <section id="introdução" class="level2">
 <h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
-<p>Isso é uma seção com uma citação <span class="citation" data-cites="knuth84">(<a href="#ref-knuth84" role="doc-biblioref">Knuth, 1984</a>)</span>. <span class="citation" data-cites="knuth84">Knuth (<a href="#ref-knuth84" role="doc-biblioref">1984</a>)</span> fala sobre <em>Literate Programming</em>.</p>
-<div id="4e04547f" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-stdout">
-<pre><code>{'uci_id': 697, 'name': "Predict Students' Dropout and Academic Success", 'repository_url': 'https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success', 'data_url': 'https://archive.ics.uci.edu/static/public/697/data.csv', 'abstract': "A dataset created from a higher education institution (acquired from several disjoint databases) related to students enrolled in different undergraduate degrees, such as agronomy, design, education, nursing, journalism, management, social service, and technologies.\nThe dataset includes information known at the time of student enrollment (academic path, demographics, and social-economic factors) and the students' academic performance at the end of the first and second semesters. \nThe data is used to build classification models to predict students' dropout and academic sucess. The problem is formulated as a three category classification task, in which there is a strong imbalance towards one of the classes.", 'area': 'Social Science', 'tasks': ['Classification'], 'characteristics': ['Tabular'], 'num_instances': 4424, 'num_features': 36, 'feature_types': ['Real', 'Categorical', 'Integer'], 'demographics': ['Marital Status', 'Education Level', 'Nationality', 'Occupation', 'Gender', 'Age'], 'target_col': ['Target'], 'index_col': None, 'has_missing_values': 'no', 'missing_values_symbol': None, 'year_of_dataset_creation': 2021, 'last_updated': 'Mon Feb 26 2024', 'dataset_doi': '10.24432/C5MC89', 'creators': ['Valentim Realinho', 'Mónica Vieira Martins', 'Jorge Machado', 'Luís Baptista'], 'intro_paper': {'ID': 99, 'type': 'NATIVE', 'title': "Early prediction of student's performance in higher education: a case study", 'authors': 'Mónica V. Martins, Daniel Tolledo, Jorge Machado, Luís M. T. Baptista, and Valentim Realinho', 'venue': 'Trends and Applications in Information Systems and Technologies', 'year': 2021, 'journal': 'Advances in Intelligent Systems and Computing series', 'DOI': 'http://www.doi.org/10.1007/978-3-030-72657-7_16', 'URL': 'http://www.worldcist.org/2021/', 'sha': None, 'corpus': None, 'arxiv': None, 'mag': None, 'acl': None, 'pmid': None, 'pmcid': None}, 'additional_info': {'summary': None, 'purpose': 'The dataset was created in a project that aims to contribute to the reduction of academic dropout and failure in higher education, by using machine learning techniques to identify students at risk at an early stage of their academic path, so that strategies to support them can be put into place. \n\nThe dataset includes information known at the time of student enrollment – academic path, demographics, and social-economic factors. \n\nThe problem is formulated as a three category classification task (dropout, enrolled, and graduate) at the end of the normal duration of the course. \n', 'funded_by': 'This dataset is supported by program SATDAP - Capacitação da Administração Pública under grant POCI-05-5762-FSE-000191, Portugal.', 'instances_represent': 'Each instance is a student', 'recommended_data_splits': 'The dataset was used, in our project, with a data split of 80% for training and 20% for test.', 'sensitive_data': None, 'preprocessing_description': 'We performed a rigorous data preprocessing to handle data from anomalies, unexplainable outliers, and missing values.', 'variable_info': None, 'citation': 'If you use this dataset in experiments for a scientific publication, please kindly cite our paper: \nM.V.Martins, D. Tolledo, J. Machado, L. M.T. Baptista, V.Realinho. (2021) "Early prediction of student’s performance in higher education: a case study" Trends and Applications in Information Systems and Technologies, vol.1, in Advances in Intelligent Systems and Computing series. Springer. DOI: 10.1007/978-3-030-72657-7_16'}}
-                                              name     role         type  \
-0                                   Marital Status  Feature      Integer   
-1                                 Application mode  Feature      Integer   
-2                                Application order  Feature      Integer   
-3                                           Course  Feature      Integer   
-4                       Daytime/evening attendance  Feature      Integer   
-5                           Previous qualification  Feature      Integer   
-6                   Previous qualification (grade)  Feature   Continuous   
-7                                      Nacionality  Feature      Integer   
-8                           Mother's qualification  Feature      Integer   
-9                           Father's qualification  Feature      Integer   
-10                             Mother's occupation  Feature      Integer   
-11                             Father's occupation  Feature      Integer   
-12                                 Admission grade  Feature   Continuous   
-13                                       Displaced  Feature      Integer   
-14                       Educational special needs  Feature      Integer   
-15                                          Debtor  Feature      Integer   
-16                         Tuition fees up to date  Feature      Integer   
-17                                          Gender  Feature      Integer   
-18                              Scholarship holder  Feature      Integer   
-19                               Age at enrollment  Feature      Integer   
-20                                   International  Feature      Integer   
-21             Curricular units 1st sem (credited)  Feature      Integer   
-22             Curricular units 1st sem (enrolled)  Feature      Integer   
-23          Curricular units 1st sem (evaluations)  Feature      Integer   
-24             Curricular units 1st sem (approved)  Feature      Integer   
-25                Curricular units 1st sem (grade)  Feature      Integer   
-26  Curricular units 1st sem (without evaluations)  Feature      Integer   
-27             Curricular units 2nd sem (credited)  Feature      Integer   
-28             Curricular units 2nd sem (enrolled)  Feature      Integer   
-29          Curricular units 2nd sem (evaluations)  Feature      Integer   
-30             Curricular units 2nd sem (approved)  Feature      Integer   
-31                Curricular units 2nd sem (grade)  Feature      Integer   
-32  Curricular units 2nd sem (without evaluations)  Feature      Integer   
-33                               Unemployment rate  Feature   Continuous   
-34                                  Inflation rate  Feature   Continuous   
-35                                             GDP  Feature   Continuous   
-36                                          Target   Target  Categorical   
-
-        demographic                                        description units  \
-0    Marital Status  1 – single 2 – married 3 – widower 4 – divorce...  None   
-1               NaN  1 - 1st phase - general contingent 2 - Ordinan...  None   
-2               NaN  Application order (between 0 - first choice; a...  None   
-3               NaN  33 - Biofuel Production Technologies 171 - Ani...  None   
-4               NaN                            1 – daytime 0 - evening  None   
-5   Education Level  1 - Secondary education 2 - Higher education -...  None   
-6               NaN  Grade of previous qualification (between 0 and...  None   
-7       Nationality  1 - Portuguese; 2 - German; 6 - Spanish; 11 - ...  None   
-8   Education Level  1 - Secondary Education - 12th Year of Schooli...  None   
-9   Education Level  1 - Secondary Education - 12th Year of Schooli...  None   
-10       Occupation  0 - Student 1 - Representatives of the Legisla...  None   
-11       Occupation  0 - Student 1 - Representatives of the Legisla...  None   
-12              NaN                Admission grade (between 0 and 200)  None   
-13              NaN                                     1 – yes 0 – no  None   
-14              NaN                                     1 – yes 0 – no  None   
-15              NaN                                     1 – yes 0 – no  None   
-16              NaN                                     1 – yes 0 – no  None   
-17           Gender                                1 – male 0 – female  None   
-18              NaN                                     1 – yes 0 – no  None   
-19              Age                       Age of studend at enrollment  None   
-20              NaN                                     1 – yes 0 – no  None   
-21              NaN  Number of curricular units credited in the 1st...  None   
-22              NaN  Number of curricular units enrolled in the 1st...  None   
-23              NaN  Number of evaluations to curricular units in t...  None   
-24              NaN  Number of curricular units approved in the 1st...  None   
-25              NaN  Grade average in the 1st semester (between 0 a...  None   
-26              NaN  Number of curricular units without evalutions ...  None   
-27              NaN  Number of curricular units credited in the 2nd...  None   
-28              NaN  Number of curricular units enrolled in the 2nd...  None   
-29              NaN  Number of evaluations to curricular units in t...  None   
-30              NaN  Number of curricular units approved in the 2nd...  None   
-31              NaN  Grade average in the 2nd semester (between 0 a...  None   
-32              NaN  Number of curricular units without evalutions ...  None   
-33              NaN                              Unemployment rate (%)  None   
-34              NaN                                 Inflation rate (%)  None   
-35              NaN                                                GDP  None   
-36              NaN  Target. The problem is formulated as a three c...  None   
-
-   missing_values  
-0              no  
-1              no  
-2              no  
-3              no  
-4              no  
-5              no  
-6              no  
-7              no  
-8              no  
-9              no  
-10             no  
-11             no  
-12             no  
-13             no  
-14             no  
-15             no  
-16             no  
-17             no  
-18             no  
-19             no  
-20             no  
-21             no  
-22             no  
-23             no  
-24             no  
-25             no  
-26             no  
-27             no  
-28             no  
-29             no  
-30             no  
-31             no  
-32             no  
-33             no  
-34             no  
-35             no  
-36             no  </code></pre>
-</div>
-<a class="quarto-notebook-link" id="nblink-1" href="index-preview.html#4e04547f">Fonte: Caderno do Artigo</a></div>
+<p>A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Compreender os fatores que levam um aluno a abandonar o curso ou a obter sucesso acadêmico é fundamental para a elaboração de políticas de retenção e suporte educacional mais eficazes.</p>
+<p>Neste trabalho, investigamos o problema da desistência no ensino superior utilizando dados reais. A análise se justifica pela necessidade de identificar padrões ocultos que possam sinalizar, precocemente, estudantes em situação de risco.</p>
+<p>Para isso, utilizamos o conjunto de dados <em>Predict Students’ Dropout and Academic Success</em>, disponibilizado pelo UCI Machine Learning Repository. Os dados provêm de uma instituição de ensino superior (Politécnico de Portalegre, Portugal) e englobam diversas dimensões da vida estudantil, incluindo fatores demográficos, socioeconômicos e de desempenho acadêmico prévio. A natureza dos dados é mista, contendo variáveis qualitativas (como estado civil e curso) e quantitativas (como notas e idade), permitindo uma análise estatística rica e multifacetada.</p>
+</section>
+<section id="objetivo" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
+<p>O objetivo principal deste trabalho é aplicar técnicas de estatística descritiva para caracterizar o perfil dos estudantes e identificar variáveis potencialmente associadas à evasão escolar.</p>
+<p>Para alcançar este propósito, definiram-se os seguintes objetivos específicos:</p>
+<ol type="1">
+<li><strong>Resumir e Organizar:</strong> Sintetizar as variáveis quantitativas do conjunto de dados, calculando medidas de tendência central (média, mediana) e dispersão (desvio padrão) para as notas de qualificação prévia.</li>
+<li><strong>Visualizar:</strong> Construir representações gráficas, como histogramas e boxplots, para facilitar a interpretação da distribuição das idades e notas dos alunos.</li>
+<li><strong>Identificar Anomalias:</strong> Detectar a presença de <em>outliers</em> (valores atípicos) nas notas de ingresso, investigando a existência de grupos com desempenho discrepante da maioria.</li>
+<li><strong>Caracterizar:</strong> Descrever a natureza das variáveis disponíveis no banco de dados, classificando-as conforme seus tipos e escalas para fundamentar a escolha das técnicas estatísticas aplicadas.</li>
+</ol>
 </section>
 <section id="materiais-e-métodos" class="level2">
 <h2 class="anchored" data-anchor-id="materiais-e-métodos">Materiais e Métodos</h2>
 <p>O dataset utilizado, <em>Predict Students’ Dropout and Academic Success</em> tem como origem o Instituto Politécnico de Portalegre (PP), de Portugal <span class="citation" data-cites="martinsEarlyPredictionStudents2021">(<a href="#ref-martinsEarlyPredictionStudents2021" role="doc-biblioref">Martins et al., 2021, p. 167</a>)</span>. Os dados foram coletados desde 2008 até 2019 <span class="citation" data-cites="martinsEarlyPredictionStudents2021">(<a href="#ref-martinsEarlyPredictionStudents2021" role="doc-biblioref">Martins et al., 2021, p. 168</a>)</span>. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados.</p>
+<div class="cell" data-execution_count="2">
+<div id="tbl-variaveis" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-variaveis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;1: Dicionário das Variáveis
+</figcaption>
+<div aria-describedby="tbl-variaveis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="2">
+<style type="text/css">
+</style>
+
+<table id="T_64ebe" class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th id="T_64ebe_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">name</th>
+<th id="T_64ebe_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">role</th>
+<th id="T_64ebe_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">type</th>
+<th id="T_64ebe_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">demographic</th>
+<th id="T_64ebe_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">description</th>
+<th id="T_64ebe_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">units</th>
+<th id="T_64ebe_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">missing_values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_64ebe_row0_col0" class="data row0 col0">Marital Status</td>
+<td id="T_64ebe_row0_col1" class="data row0 col1">Feature</td>
+<td id="T_64ebe_row0_col2" class="data row0 col2">Integer</td>
+<td id="T_64ebe_row0_col3" class="data row0 col3">Marital Status</td>
+<td id="T_64ebe_row0_col4" class="data row0 col4">1 – single 2 – married 3 – widower 4 – divorced 5 – facto union 6 – legally separated</td>
+<td id="T_64ebe_row0_col5" class="data row0 col5">None</td>
+<td id="T_64ebe_row0_col6" class="data row0 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row1_col0" class="data row1 col0">Application mode</td>
+<td id="T_64ebe_row1_col1" class="data row1 col1">Feature</td>
+<td id="T_64ebe_row1_col2" class="data row1 col2">Integer</td>
+<td id="T_64ebe_row1_col3" class="data row1 col3">nan</td>
+<td id="T_64ebe_row1_col4" class="data row1 col4">1 - 1st phase - general contingent 2 - Ordinance No. 612/93 5 - 1st phase - special contingent (Azores Island) 7 - Holders of other higher courses 10 - Ordinance No. 854-B/99 15 - International student (bachelor) 16 - 1st phase - special contingent (Madeira Island) 17 - 2nd phase - general contingent 18 - 3rd phase - general contingent 26 - Ordinance No. 533-A/99, item b2) (Different Plan) 27 - Ordinance No. 533-A/99, item b3 (Other Institution) 39 - Over 23 years old 42 - Transfer 43 - Change of course 44 - Technological specialization diploma holders 51 - Change of institution/course 53 - Short cycle diploma holders 57 - Change of institution/course (International)</td>
+<td id="T_64ebe_row1_col5" class="data row1 col5">None</td>
+<td id="T_64ebe_row1_col6" class="data row1 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row2_col0" class="data row2 col0">Application order</td>
+<td id="T_64ebe_row2_col1" class="data row2 col1">Feature</td>
+<td id="T_64ebe_row2_col2" class="data row2 col2">Integer</td>
+<td id="T_64ebe_row2_col3" class="data row2 col3">nan</td>
+<td id="T_64ebe_row2_col4" class="data row2 col4">Application order (between 0 - first choice; and 9 last choice)</td>
+<td id="T_64ebe_row2_col5" class="data row2 col5">None</td>
+<td id="T_64ebe_row2_col6" class="data row2 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row3_col0" class="data row3 col0">Course</td>
+<td id="T_64ebe_row3_col1" class="data row3 col1">Feature</td>
+<td id="T_64ebe_row3_col2" class="data row3 col2">Integer</td>
+<td id="T_64ebe_row3_col3" class="data row3 col3">nan</td>
+<td id="T_64ebe_row3_col4" class="data row3 col4">33 - Biofuel Production Technologies 171 - Animation and Multimedia Design 8014 - Social Service (evening attendance) 9003 - Agronomy 9070 - Communication Design 9085 - Veterinary Nursing 9119 - Informatics Engineering 9130 - Equinculture 9147 - Management 9238 - Social Service 9254 - Tourism 9500 - Nursing 9556 - Oral Hygiene 9670 - Advertising and Marketing Management 9773 - Journalism and Communication 9853 - Basic Education 9991 - Management (evening attendance)</td>
+<td id="T_64ebe_row3_col5" class="data row3 col5">None</td>
+<td id="T_64ebe_row3_col6" class="data row3 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row4_col0" class="data row4 col0">Daytime/evening attendance</td>
+<td id="T_64ebe_row4_col1" class="data row4 col1">Feature</td>
+<td id="T_64ebe_row4_col2" class="data row4 col2">Integer</td>
+<td id="T_64ebe_row4_col3" class="data row4 col3">nan</td>
+<td id="T_64ebe_row4_col4" class="data row4 col4">1 – daytime 0 - evening</td>
+<td id="T_64ebe_row4_col5" class="data row4 col5">None</td>
+<td id="T_64ebe_row4_col6" class="data row4 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row5_col0" class="data row5 col0">Previous qualification</td>
+<td id="T_64ebe_row5_col1" class="data row5 col1">Feature</td>
+<td id="T_64ebe_row5_col2" class="data row5 col2">Integer</td>
+<td id="T_64ebe_row5_col3" class="data row5 col3">Education Level</td>
+<td id="T_64ebe_row5_col4" class="data row5 col4">1 - Secondary education 2 - Higher education - bachelor's degree 3 - Higher education - degree 4 - Higher education - master's 5 - Higher education - doctorate 6 - Frequency of higher education 9 - 12th year of schooling - not completed 10 - 11th year of schooling - not completed 12 - Other - 11th year of schooling 14 - 10th year of schooling 15 - 10th year of schooling - not completed 19 - Basic education 3rd cycle (9th/10th/11th year) or equiv. 38 - Basic education 2nd cycle (6th/7th/8th year) or equiv. 39 - Technological specialization course 40 - Higher education - degree (1st cycle) 42 - Professional higher technical course 43 - Higher education - master (2nd cycle)</td>
+<td id="T_64ebe_row5_col5" class="data row5 col5">None</td>
+<td id="T_64ebe_row5_col6" class="data row5 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row6_col0" class="data row6 col0">Previous qualification (grade)</td>
+<td id="T_64ebe_row6_col1" class="data row6 col1">Feature</td>
+<td id="T_64ebe_row6_col2" class="data row6 col2">Continuous</td>
+<td id="T_64ebe_row6_col3" class="data row6 col3">nan</td>
+<td id="T_64ebe_row6_col4" class="data row6 col4">Grade of previous qualification (between 0 and 200)</td>
+<td id="T_64ebe_row6_col5" class="data row6 col5">None</td>
+<td id="T_64ebe_row6_col6" class="data row6 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row7_col0" class="data row7 col0">Nacionality</td>
+<td id="T_64ebe_row7_col1" class="data row7 col1">Feature</td>
+<td id="T_64ebe_row7_col2" class="data row7 col2">Integer</td>
+<td id="T_64ebe_row7_col3" class="data row7 col3">Nationality</td>
+<td id="T_64ebe_row7_col4" class="data row7 col4">1 - Portuguese; 2 - German; 6 - Spanish; 11 - Italian; 13 - Dutch; 14 - English; 17 - Lithuanian; 21 - Angolan; 22 - Cape Verdean; 24 - Guinean; 25 - Mozambican; 26 - Santomean; 32 - Turkish; 41 - Brazilian; 62 - Romanian; 100 - Moldova (Republic of); 101 - Mexican; 103 - Ukrainian; 105 - Russian; 108 - Cuban; 109 - Colombian</td>
+<td id="T_64ebe_row7_col5" class="data row7 col5">None</td>
+<td id="T_64ebe_row7_col6" class="data row7 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row8_col0" class="data row8 col0">Mother's qualification</td>
+<td id="T_64ebe_row8_col1" class="data row8 col1">Feature</td>
+<td id="T_64ebe_row8_col2" class="data row8 col2">Integer</td>
+<td id="T_64ebe_row8_col3" class="data row8 col3">Education Level</td>
+<td id="T_64ebe_row8_col4" class="data row8 col4">1 - Secondary Education - 12th Year of Schooling or Eq. 2 - Higher Education - Bachelor's Degree 3 - Higher Education - Degree 4 - Higher Education - Master's 5 - Higher Education - Doctorate 6 - Frequency of Higher Education 9 - 12th Year of Schooling - Not Completed 10 - 11th Year of Schooling - Not Completed 11 - 7th Year (Old) 12 - Other - 11th Year of Schooling 14 - 10th Year of Schooling 18 - General commerce course 19 - Basic Education 3rd Cycle (9th/10th/11th Year) or Equiv. 22 - Technical-professional course 26 - 7th year of schooling 27 - 2nd cycle of the general high school course 29 - 9th Year of Schooling - Not Completed 30 - 8th year of schooling 34 - Unknown 35 - Can't read or write 36 - Can read without having a 4th year of schooling 37 - Basic education 1st cycle (4th/5th year) or equiv. 38 - Basic Education 2nd Cycle (6th/7th/8th Year) or Equiv. 39 - Technological specialization course 40 - Higher education - degree (1st cycle) 41 - Specialized higher studies course 42 - Professional higher technical course 43 - Higher Education - Master (2nd cycle) 44 - Higher Education - Doctorate (3rd cycle)</td>
+<td id="T_64ebe_row8_col5" class="data row8 col5">None</td>
+<td id="T_64ebe_row8_col6" class="data row8 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row9_col0" class="data row9 col0">Father's qualification</td>
+<td id="T_64ebe_row9_col1" class="data row9 col1">Feature</td>
+<td id="T_64ebe_row9_col2" class="data row9 col2">Integer</td>
+<td id="T_64ebe_row9_col3" class="data row9 col3">Education Level</td>
+<td id="T_64ebe_row9_col4" class="data row9 col4">1 - Secondary Education - 12th Year of Schooling or Eq. 2 - Higher Education - Bachelor's Degree 3 - Higher Education - Degree 4 - Higher Education - Master's 5 - Higher Education - Doctorate 6 - Frequency of Higher Education 9 - 12th Year of Schooling - Not Completed 10 - 11th Year of Schooling - Not Completed 11 - 7th Year (Old) 12 - Other - 11th Year of Schooling 13 - 2nd year complementary high school course 14 - 10th Year of Schooling 18 - General commerce course 19 - Basic Education 3rd Cycle (9th/10th/11th Year) or Equiv. 20 - Complementary High School Course 22 - Technical-professional course 25 - Complementary High School Course - not concluded 26 - 7th year of schooling 27 - 2nd cycle of the general high school course 29 - 9th Year of Schooling - Not Completed 30 - 8th year of schooling 31 - General Course of Administration and Commerce 33 - Supplementary Accounting and Administration 34 - Unknown 35 - Can't read or write 36 - Can read without having a 4th year of schooling 37 - Basic education 1st cycle (4th/5th year) or equiv. 38 - Basic Education 2nd Cycle (6th/7th/8th Year) or Equiv. 39 - Technological specialization course 40 - Higher education - degree (1st cycle) 41 - Specialized higher studies course 42 - Professional higher technical course 43 - Higher Education - Master (2nd cycle) 44 - Higher Education - Doctorate (3rd cycle)</td>
+<td id="T_64ebe_row9_col5" class="data row9 col5">None</td>
+<td id="T_64ebe_row9_col6" class="data row9 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row10_col0" class="data row10 col0">Mother's occupation</td>
+<td id="T_64ebe_row10_col1" class="data row10 col1">Feature</td>
+<td id="T_64ebe_row10_col2" class="data row10 col2">Integer</td>
+<td id="T_64ebe_row10_col3" class="data row10 col3">Occupation</td>
+<td id="T_64ebe_row10_col4" class="data row10 col4">0 - Student 1 - Representatives of the Legislative Power and Executive Bodies, Directors, Directors and Executive Managers 2 - Specialists in Intellectual and Scientific Activities 3 - Intermediate Level Technicians and Professions 4 - Administrative staff 5 - Personal Services, Security and Safety Workers and Sellers 6 - Farmers and Skilled Workers in Agriculture, Fisheries and Forestry 7 - Skilled Workers in Industry, Construction and Craftsmen 8 - Installation and Machine Operators and Assembly Workers 9 - Unskilled Workers 10 - Armed Forces Professions 90 - Other Situation 99 - (blank) 122 - Health professionals 123 - teachers 125 - Specialists in information and communication technologies (ICT) 131 - Intermediate level science and engineering technicians and professions 132 - Technicians and professionals, of intermediate level of health 134 - Intermediate level technicians from legal, social, sports, cultural and similar services 141 - Office workers, secretaries in general and data processing operators 143 - Data, accounting, statistical, financial services and registry-related operators 144 - Other administrative support staff 151 - personal service workers 152 - sellers 153 - Personal care workers and the like 171 - Skilled construction workers and the like, except electricians 173 - Skilled workers in printing, precision instrument manufacturing, jewelers, artisans and the like 175 - Workers in food processing, woodworking, clothing and other industries and crafts 191 - cleaning workers 192 - Unskilled workers in agriculture, animal production, fisheries and forestry 193 - Unskilled workers in extractive industry, construction, manufacturing and transport 194 - Meal preparation assistants</td>
+<td id="T_64ebe_row10_col5" class="data row10 col5">None</td>
+<td id="T_64ebe_row10_col6" class="data row10 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row11_col0" class="data row11 col0">Father's occupation</td>
+<td id="T_64ebe_row11_col1" class="data row11 col1">Feature</td>
+<td id="T_64ebe_row11_col2" class="data row11 col2">Integer</td>
+<td id="T_64ebe_row11_col3" class="data row11 col3">Occupation</td>
+<td id="T_64ebe_row11_col4" class="data row11 col4">0 - Student 1 - Representatives of the Legislative Power and Executive Bodies, Directors, Directors and Executive Managers 2 - Specialists in Intellectual and Scientific Activities 3 - Intermediate Level Technicians and Professions 4 - Administrative staff 5 - Personal Services, Security and Safety Workers and Sellers 6 - Farmers and Skilled Workers in Agriculture, Fisheries and Forestry 7 - Skilled Workers in Industry, Construction and Craftsmen 8 - Installation and Machine Operators and Assembly Workers 9 - Unskilled Workers 10 - Armed Forces Professions 90 - Other Situation 99 - (blank) 101 - Armed Forces Officers 102 - Armed Forces Sergeants 103 - Other Armed Forces personnel 112 - Directors of administrative and commercial services 114 - Hotel, catering, trade and other services directors 121 - Specialists in the physical sciences, mathematics, engineering and related techniques 122 - Health professionals 123 - teachers 124 - Specialists in finance, accounting, administrative organization, public and commercial relations 131 - Intermediate level science and engineering technicians and professions 132 - Technicians and professionals, of intermediate level of health 134 - Intermediate level technicians from legal, social, sports, cultural and similar services 135 - Information and communication technology technicians 141 - Office workers, secretaries in general and data processing operators 143 - Data, accounting, statistical, financial services and registry-related operators 144 - Other administrative support staff 151 - personal service workers 152 - sellers 153 - Personal care workers and the like 154 - Protection and security services personnel 161 - Market-oriented farmers and skilled agricultural and animal production workers 163 - Farmers, livestock keepers, fishermen, hunters and gatherers, subsistence 171 - Skilled construction workers and the like, except electricians 172 - Skilled workers in metallurgy, metalworking and similar 174 - Skilled workers in electricity and electronics 175 - Workers in food processing, woodworking, clothing and other industries and crafts 181 - Fixed plant and machine operators 182 - assembly workers 183 - Vehicle drivers and mobile equipment operators 192 - Unskilled workers in agriculture, animal production, fisheries and forestry 193 - Unskilled workers in extractive industry, construction, manufacturing and transport 194 - Meal preparation assistants 195 - Street vendors (except food) and street service providers</td>
+<td id="T_64ebe_row11_col5" class="data row11 col5">None</td>
+<td id="T_64ebe_row11_col6" class="data row11 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row12_col0" class="data row12 col0">Admission grade</td>
+<td id="T_64ebe_row12_col1" class="data row12 col1">Feature</td>
+<td id="T_64ebe_row12_col2" class="data row12 col2">Continuous</td>
+<td id="T_64ebe_row12_col3" class="data row12 col3">nan</td>
+<td id="T_64ebe_row12_col4" class="data row12 col4">Admission grade (between 0 and 200)</td>
+<td id="T_64ebe_row12_col5" class="data row12 col5">None</td>
+<td id="T_64ebe_row12_col6" class="data row12 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row13_col0" class="data row13 col0">Displaced</td>
+<td id="T_64ebe_row13_col1" class="data row13 col1">Feature</td>
+<td id="T_64ebe_row13_col2" class="data row13 col2">Integer</td>
+<td id="T_64ebe_row13_col3" class="data row13 col3">nan</td>
+<td id="T_64ebe_row13_col4" class="data row13 col4">1 – yes 0 – no</td>
+<td id="T_64ebe_row13_col5" class="data row13 col5">None</td>
+<td id="T_64ebe_row13_col6" class="data row13 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row14_col0" class="data row14 col0">Educational special needs</td>
+<td id="T_64ebe_row14_col1" class="data row14 col1">Feature</td>
+<td id="T_64ebe_row14_col2" class="data row14 col2">Integer</td>
+<td id="T_64ebe_row14_col3" class="data row14 col3">nan</td>
+<td id="T_64ebe_row14_col4" class="data row14 col4">1 – yes 0 – no</td>
+<td id="T_64ebe_row14_col5" class="data row14 col5">None</td>
+<td id="T_64ebe_row14_col6" class="data row14 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row15_col0" class="data row15 col0">Debtor</td>
+<td id="T_64ebe_row15_col1" class="data row15 col1">Feature</td>
+<td id="T_64ebe_row15_col2" class="data row15 col2">Integer</td>
+<td id="T_64ebe_row15_col3" class="data row15 col3">nan</td>
+<td id="T_64ebe_row15_col4" class="data row15 col4">1 – yes 0 – no</td>
+<td id="T_64ebe_row15_col5" class="data row15 col5">None</td>
+<td id="T_64ebe_row15_col6" class="data row15 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row16_col0" class="data row16 col0">Tuition fees up to date</td>
+<td id="T_64ebe_row16_col1" class="data row16 col1">Feature</td>
+<td id="T_64ebe_row16_col2" class="data row16 col2">Integer</td>
+<td id="T_64ebe_row16_col3" class="data row16 col3">nan</td>
+<td id="T_64ebe_row16_col4" class="data row16 col4">1 – yes 0 – no</td>
+<td id="T_64ebe_row16_col5" class="data row16 col5">None</td>
+<td id="T_64ebe_row16_col6" class="data row16 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row17_col0" class="data row17 col0">Gender</td>
+<td id="T_64ebe_row17_col1" class="data row17 col1">Feature</td>
+<td id="T_64ebe_row17_col2" class="data row17 col2">Integer</td>
+<td id="T_64ebe_row17_col3" class="data row17 col3">Gender</td>
+<td id="T_64ebe_row17_col4" class="data row17 col4">1 – male 0 – female</td>
+<td id="T_64ebe_row17_col5" class="data row17 col5">None</td>
+<td id="T_64ebe_row17_col6" class="data row17 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row18_col0" class="data row18 col0">Scholarship holder</td>
+<td id="T_64ebe_row18_col1" class="data row18 col1">Feature</td>
+<td id="T_64ebe_row18_col2" class="data row18 col2">Integer</td>
+<td id="T_64ebe_row18_col3" class="data row18 col3">nan</td>
+<td id="T_64ebe_row18_col4" class="data row18 col4">1 – yes 0 – no</td>
+<td id="T_64ebe_row18_col5" class="data row18 col5">None</td>
+<td id="T_64ebe_row18_col6" class="data row18 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row19_col0" class="data row19 col0">Age at enrollment</td>
+<td id="T_64ebe_row19_col1" class="data row19 col1">Feature</td>
+<td id="T_64ebe_row19_col2" class="data row19 col2">Integer</td>
+<td id="T_64ebe_row19_col3" class="data row19 col3">Age</td>
+<td id="T_64ebe_row19_col4" class="data row19 col4">Age of studend at enrollment</td>
+<td id="T_64ebe_row19_col5" class="data row19 col5">None</td>
+<td id="T_64ebe_row19_col6" class="data row19 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row20_col0" class="data row20 col0">International</td>
+<td id="T_64ebe_row20_col1" class="data row20 col1">Feature</td>
+<td id="T_64ebe_row20_col2" class="data row20 col2">Integer</td>
+<td id="T_64ebe_row20_col3" class="data row20 col3">nan</td>
+<td id="T_64ebe_row20_col4" class="data row20 col4">1 – yes 0 – no</td>
+<td id="T_64ebe_row20_col5" class="data row20 col5">None</td>
+<td id="T_64ebe_row20_col6" class="data row20 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row21_col0" class="data row21 col0">Curricular units 1st sem (credited)</td>
+<td id="T_64ebe_row21_col1" class="data row21 col1">Feature</td>
+<td id="T_64ebe_row21_col2" class="data row21 col2">Integer</td>
+<td id="T_64ebe_row21_col3" class="data row21 col3">nan</td>
+<td id="T_64ebe_row21_col4" class="data row21 col4">Number of curricular units credited in the 1st semester</td>
+<td id="T_64ebe_row21_col5" class="data row21 col5">None</td>
+<td id="T_64ebe_row21_col6" class="data row21 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row22_col0" class="data row22 col0">Curricular units 1st sem (enrolled)</td>
+<td id="T_64ebe_row22_col1" class="data row22 col1">Feature</td>
+<td id="T_64ebe_row22_col2" class="data row22 col2">Integer</td>
+<td id="T_64ebe_row22_col3" class="data row22 col3">nan</td>
+<td id="T_64ebe_row22_col4" class="data row22 col4">Number of curricular units enrolled in the 1st semester</td>
+<td id="T_64ebe_row22_col5" class="data row22 col5">None</td>
+<td id="T_64ebe_row22_col6" class="data row22 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row23_col0" class="data row23 col0">Curricular units 1st sem (evaluations)</td>
+<td id="T_64ebe_row23_col1" class="data row23 col1">Feature</td>
+<td id="T_64ebe_row23_col2" class="data row23 col2">Integer</td>
+<td id="T_64ebe_row23_col3" class="data row23 col3">nan</td>
+<td id="T_64ebe_row23_col4" class="data row23 col4">Number of evaluations to curricular units in the 1st semester</td>
+<td id="T_64ebe_row23_col5" class="data row23 col5">None</td>
+<td id="T_64ebe_row23_col6" class="data row23 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row24_col0" class="data row24 col0">Curricular units 1st sem (approved)</td>
+<td id="T_64ebe_row24_col1" class="data row24 col1">Feature</td>
+<td id="T_64ebe_row24_col2" class="data row24 col2">Integer</td>
+<td id="T_64ebe_row24_col3" class="data row24 col3">nan</td>
+<td id="T_64ebe_row24_col4" class="data row24 col4">Number of curricular units approved in the 1st semester</td>
+<td id="T_64ebe_row24_col5" class="data row24 col5">None</td>
+<td id="T_64ebe_row24_col6" class="data row24 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row25_col0" class="data row25 col0">Curricular units 1st sem (grade)</td>
+<td id="T_64ebe_row25_col1" class="data row25 col1">Feature</td>
+<td id="T_64ebe_row25_col2" class="data row25 col2">Integer</td>
+<td id="T_64ebe_row25_col3" class="data row25 col3">nan</td>
+<td id="T_64ebe_row25_col4" class="data row25 col4">Grade average in the 1st semester (between 0 and 20)</td>
+<td id="T_64ebe_row25_col5" class="data row25 col5">None</td>
+<td id="T_64ebe_row25_col6" class="data row25 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row26_col0" class="data row26 col0">Curricular units 1st sem (without evaluations)</td>
+<td id="T_64ebe_row26_col1" class="data row26 col1">Feature</td>
+<td id="T_64ebe_row26_col2" class="data row26 col2">Integer</td>
+<td id="T_64ebe_row26_col3" class="data row26 col3">nan</td>
+<td id="T_64ebe_row26_col4" class="data row26 col4">Number of curricular units without evalutions in the 1st semester</td>
+<td id="T_64ebe_row26_col5" class="data row26 col5">None</td>
+<td id="T_64ebe_row26_col6" class="data row26 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row27_col0" class="data row27 col0">Curricular units 2nd sem (credited)</td>
+<td id="T_64ebe_row27_col1" class="data row27 col1">Feature</td>
+<td id="T_64ebe_row27_col2" class="data row27 col2">Integer</td>
+<td id="T_64ebe_row27_col3" class="data row27 col3">nan</td>
+<td id="T_64ebe_row27_col4" class="data row27 col4">Number of curricular units credited in the 2nd semester</td>
+<td id="T_64ebe_row27_col5" class="data row27 col5">None</td>
+<td id="T_64ebe_row27_col6" class="data row27 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row28_col0" class="data row28 col0">Curricular units 2nd sem (enrolled)</td>
+<td id="T_64ebe_row28_col1" class="data row28 col1">Feature</td>
+<td id="T_64ebe_row28_col2" class="data row28 col2">Integer</td>
+<td id="T_64ebe_row28_col3" class="data row28 col3">nan</td>
+<td id="T_64ebe_row28_col4" class="data row28 col4">Number of curricular units enrolled in the 2nd semester</td>
+<td id="T_64ebe_row28_col5" class="data row28 col5">None</td>
+<td id="T_64ebe_row28_col6" class="data row28 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row29_col0" class="data row29 col0">Curricular units 2nd sem (evaluations)</td>
+<td id="T_64ebe_row29_col1" class="data row29 col1">Feature</td>
+<td id="T_64ebe_row29_col2" class="data row29 col2">Integer</td>
+<td id="T_64ebe_row29_col3" class="data row29 col3">nan</td>
+<td id="T_64ebe_row29_col4" class="data row29 col4">Number of evaluations to curricular units in the 2nd semester</td>
+<td id="T_64ebe_row29_col5" class="data row29 col5">None</td>
+<td id="T_64ebe_row29_col6" class="data row29 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row30_col0" class="data row30 col0">Curricular units 2nd sem (approved)</td>
+<td id="T_64ebe_row30_col1" class="data row30 col1">Feature</td>
+<td id="T_64ebe_row30_col2" class="data row30 col2">Integer</td>
+<td id="T_64ebe_row30_col3" class="data row30 col3">nan</td>
+<td id="T_64ebe_row30_col4" class="data row30 col4">Number of curricular units approved in the 2nd semester</td>
+<td id="T_64ebe_row30_col5" class="data row30 col5">None</td>
+<td id="T_64ebe_row30_col6" class="data row30 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row31_col0" class="data row31 col0">Curricular units 2nd sem (grade)</td>
+<td id="T_64ebe_row31_col1" class="data row31 col1">Feature</td>
+<td id="T_64ebe_row31_col2" class="data row31 col2">Integer</td>
+<td id="T_64ebe_row31_col3" class="data row31 col3">nan</td>
+<td id="T_64ebe_row31_col4" class="data row31 col4">Grade average in the 2nd semester (between 0 and 20)</td>
+<td id="T_64ebe_row31_col5" class="data row31 col5">None</td>
+<td id="T_64ebe_row31_col6" class="data row31 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row32_col0" class="data row32 col0">Curricular units 2nd sem (without evaluations)</td>
+<td id="T_64ebe_row32_col1" class="data row32 col1">Feature</td>
+<td id="T_64ebe_row32_col2" class="data row32 col2">Integer</td>
+<td id="T_64ebe_row32_col3" class="data row32 col3">nan</td>
+<td id="T_64ebe_row32_col4" class="data row32 col4">Number of curricular units without evalutions in the 1st semester</td>
+<td id="T_64ebe_row32_col5" class="data row32 col5">None</td>
+<td id="T_64ebe_row32_col6" class="data row32 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row33_col0" class="data row33 col0">Unemployment rate</td>
+<td id="T_64ebe_row33_col1" class="data row33 col1">Feature</td>
+<td id="T_64ebe_row33_col2" class="data row33 col2">Continuous</td>
+<td id="T_64ebe_row33_col3" class="data row33 col3">nan</td>
+<td id="T_64ebe_row33_col4" class="data row33 col4">Unemployment rate (%)</td>
+<td id="T_64ebe_row33_col5" class="data row33 col5">None</td>
+<td id="T_64ebe_row33_col6" class="data row33 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row34_col0" class="data row34 col0">Inflation rate</td>
+<td id="T_64ebe_row34_col1" class="data row34 col1">Feature</td>
+<td id="T_64ebe_row34_col2" class="data row34 col2">Continuous</td>
+<td id="T_64ebe_row34_col3" class="data row34 col3">nan</td>
+<td id="T_64ebe_row34_col4" class="data row34 col4">Inflation rate (%)</td>
+<td id="T_64ebe_row34_col5" class="data row34 col5">None</td>
+<td id="T_64ebe_row34_col6" class="data row34 col6">no</td>
+</tr>
+<tr class="even">
+<td id="T_64ebe_row35_col0" class="data row35 col0">GDP</td>
+<td id="T_64ebe_row35_col1" class="data row35 col1">Feature</td>
+<td id="T_64ebe_row35_col2" class="data row35 col2">Continuous</td>
+<td id="T_64ebe_row35_col3" class="data row35 col3">nan</td>
+<td id="T_64ebe_row35_col4" class="data row35 col4">GDP</td>
+<td id="T_64ebe_row35_col5" class="data row35 col5">None</td>
+<td id="T_64ebe_row35_col6" class="data row35 col6">no</td>
+</tr>
+<tr class="odd">
+<td id="T_64ebe_row36_col0" class="data row36 col0">Target</td>
+<td id="T_64ebe_row36_col1" class="data row36 col1">Target</td>
+<td id="T_64ebe_row36_col2" class="data row36 col2">Categorical</td>
+<td id="T_64ebe_row36_col3" class="data row36 col3">nan</td>
+<td id="T_64ebe_row36_col4" class="data row36 col4">Target. The problem is formulated as a three category classification task (dropout, enrolled, and graduate) at the end of the normal duration of the course</td>
+<td id="T_64ebe_row36_col5" class="data row36 col5">None</td>
+<td id="T_64ebe_row36_col6" class="data row36 col6">no</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+<a class="quarto-notebook-link" id="nblink-1" href="index-preview.html">Fonte: Caderno do Artigo</a></div>
 </section>
 <section id="resultados" class="level2">
 <h2 class="anchored" data-anchor-id="resultados">Resultados</h2>
+<div class="cell" data-execution_count="3">
+<div id="tbl-estatisticas" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="3">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-estatisticas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;2: Estatísticas Descritivas das Notas
+</figcaption>
+<div aria-describedby="tbl-estatisticas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="3">
+<style type="text/css">
+</style>
+
+<table id="T_55132" class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th id="T_55132_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Previous qualification (grade)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th id="T_55132_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">count</th>
+<td id="T_55132_row0_col0" class="data row0 col0">4424.00</td>
+</tr>
+<tr class="even">
+<th id="T_55132_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">mean</th>
+<td id="T_55132_row1_col0" class="data row1 col0">132.61</td>
+</tr>
+<tr class="odd">
+<th id="T_55132_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">std</th>
+<td id="T_55132_row2_col0" class="data row2 col0">13.19</td>
+</tr>
+<tr class="even">
+<th id="T_55132_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">min</th>
+<td id="T_55132_row3_col0" class="data row3 col0">95.00</td>
+</tr>
+<tr class="odd">
+<th id="T_55132_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">25%</th>
+<td id="T_55132_row4_col0" class="data row4 col0">125.00</td>
+</tr>
+<tr class="even">
+<th id="T_55132_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">50%</th>
+<td id="T_55132_row5_col0" class="data row5 col0">133.10</td>
+</tr>
+<tr class="odd">
+<th id="T_55132_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">75%</th>
+<td id="T_55132_row6_col0" class="data row6 col0">140.00</td>
+</tr>
+<tr class="even">
+<th id="T_55132_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">max</th>
+<td id="T_55132_row7_col0" class="data row7 col0">190.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div id="cell-fig-boxplot-notas" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div id="fig-boxplot-notas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-boxplot-notas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-boxplot-notas-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figura&nbsp;1: Distribuição das Notas (Identificando Outliers)"><img src="index_files/figure-html/fig-boxplot-notas-output-1.png" width="632" height="377" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplot-notas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Distribuição das Notas (Identificando Outliers)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="análise-dos-resultados" class="level3">
+<h3 class="anchored" data-anchor-id="análise-dos-resultados">Análise dos Resultados</h3>
+<p>Com base na <strong>Tabela 1</strong>, observamos que a nota média de qualificação prévia dos alunos é de aproximadamente <strong>132.6 pontos</strong>, com uma mediana muito próxima (<strong>133.1</strong>), o que indica uma distribuição relativamente simétrica.</p>
+<p>Entretanto, o <strong>Boxplot (Figura 1)</strong> revela a presença clara de <strong>outliers</strong> (valores atípicos). Notamos um grupo de alunos com notas excepcionalmente altas (acima de 160) e outro com notas muito baixas (abaixo de 100). Esses pontos discrepantes sugerem que o nível de preparo prévio dos alunos é bastante heterogêneo.</p>
+</section>
 </section>
 <section id="conclusão" class="level2">
 <h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
@@ -750,6 +1093,38 @@ VALENTIM REALINHO, Mónica Vieira Martins. <strong>Predict <span>Students</span>
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
