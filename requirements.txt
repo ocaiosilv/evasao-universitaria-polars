@@ -1,7 +1,2 @@
 ucimlrepo==0.0.7
-pandas
-matplotlib
-ucimlrepo
-jupyter
-pyyaml
-scikit-learn
+matplotlib==3.10.8
