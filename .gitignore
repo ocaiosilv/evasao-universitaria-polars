@@ -15,6 +15,7 @@ site_libs
 *.log
 *.tex
 *.pdf
+index_files
 
 # Adicionado automaticamente.
 .Rproj.user
