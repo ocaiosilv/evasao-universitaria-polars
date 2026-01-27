@@ -17,10 +17,10 @@ O objetivo principal deste trabalho é aplicar técnicas de estatística descrit
 
 Para alcançar este propósito, definiram-se os seguintes objetivos específicos:
 
-1.  **Resumir e Organizar:** Sintetizar as variáveis quantitativas do conjunto de dados, calculando medidas de tendência central (média, mediana) e dispersão (desvio padrão) para as notas de qualificação prévia.
-2.  **Visualizar:** Construir representações gráficas, como histogramas e boxplots, para facilitar a interpretação da distribuição das idades e notas dos alunos.
-3.  **Identificar Anomalias:** Detectar a presença de *outliers* (valores atípicos) nas notas de ingresso, investigando a existência de grupos com desempenho discrepante da maioria.
-4.  **Caracterizar:** Descrever a natureza das variáveis disponíveis no banco de dados, classificando-as conforme seus tipos e escalas para fundamentar a escolha das técnicas estatísticas aplicadas.
+1. **Resumir e Organizar:** Sintetizar as variáveis quantitativas do conjunto de dados, calculando medidas de tendência central (média, mediana) e dispersão (desvio padrão) para as notas de qualificação prévia.
+2. **Visualizar:** Construir representações gráficas, como histogramas e *boxplots*, para facilitar a interpretação da distribuição das idades e notas dos alunos.
+3. **Identificar Anomalias:** Detectar a presença de *outliers* (valores atípicos) nas notas de ingresso, investigando a existência de grupos com desempenho discrepante da maioria.
+4. **Caracterizar:** Descrever a natureza das variáveis disponíveis no banco de dados, classificando-as conforme seus tipos e escalas para fundamentar a escolha das técnicas estatísticas aplicadas.
 
 ## Materiais e Métodos
 
