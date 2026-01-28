@@ -24,7 +24,7 @@ Para alcançar este propósito, definiram-se os seguintes objetivos específicos
 
 ## Materiais e Métodos
 
-O dataset utilizado, *Predict Students' Dropout and Academic Success* tem como origem o Instituto Politécnico de Portalegre (PP), Portugal [@martinsEarlyPredictionStudents2021, p. 167]. Os dados foram coletados desde 2008 até 2019 [@martinsEarlyPredictionStudents2021, p. 168]. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados.
+O dataset utilizado, *Predict Students' Dropout and Academic Success* tem como origem o Instituto Politécnico de Portalegre (PP), Portugal [@martinsEarlyPredictionStudents2021, p. 167]. Os dados foram coletados desde 2008 até 2019 [@martinsEarlyPredictionStudents2021, p. 168]. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados. A tabela a seguir detalha as variáveis encontradas no *dataset*, e seus tipos.
 
 ```{python}
 #| include: false
@@ -82,6 +82,16 @@ for col_name in df.columns:
 
 pd.DataFrame(dados_auto)
 ```
+
+Para o processamento e análise dos dados mediante gráficos, foi utilizada a linguagem de programação Python [@python]. A tabela a seguir detalha as bibliotecas usadas, e suas utilidades.
+
+| Biblioteca                                          | Função                                                                           |
+|-----------------------------------------------------|----------------------------------------------------------------------------------|
+| matplotlib [@MatplotlibPythonPlotting]              | Gerar gráficos a partir dos dados.                                               |
+| pandas [@the_pandas_development_team_2026_18328522] | Manipular o *dataset*.                                                           |
+| ucimlrepo [@UcimlrepoPackageEasily]                 | Baixar o *dataset* pronto para manipulação do *UCI Machine Learning Repository*. |
+
+: Bibliotecas Utilizadas {#tbl-libraries}
 
 ## Resultados
 
