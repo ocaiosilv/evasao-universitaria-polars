@@ -33,20 +33,54 @@ from ucimlrepo import fetch_ucirepo
 # fetch dataset
 predict_students_dropout_and_academic_success = fetch_ucirepo(id=697)
 
-# data (as pandas dataframes)
-X = predict_students_dropout_and_academic_success.data.features
-y = predict_students_dropout_and_academic_success.data.targets
-
-# metadata
-# print(predict_students_dropout_and_academic_success.metadata)
+# Definindo o df
+df = predict_students_dropout_and_academic_success.data.features
 ```
 
 ```{python}
 #| label: tbl-variaveis
 #| tbl-cap: "Dicionário das Variáveis"
-#| echo: false
 
-predict_students_dropout_and_academic_success.variables.style.hide()
+import numpy as np
+import pandas as pd
+
+def classificar_variavel(coluna):
+    """
+    Classifica o tipo de variável e escala, obedecendo exceções.
+    """
+    dtype = coluna.dtype
+    n_unicos = coluna.nunique()
+    nome = coluna.name
+
+    excecoes = [
+        'Nacionality',
+        "Mother's occupation",
+        "Father's occupation"
+    ]
+
+    if np.issubdtype(dtype, np.floating):
+        return 'Quantitativa', 'Contínua'
+
+    if np.issubdtype(dtype, np.integer):
+        # Se tiver menos de 20 valores únicos, então é uma categoria
+        # (Estado Civil, Curso, Idade...)
+        if (nome in excecoes) or (n_unicos < 20):
+            return 'Qualitativa', 'Nominal'
+        else:
+            return 'Qualitativa', 'Discreta'
+
+    return 'Outro', 'Outro'
+
+dados_auto = []
+for col_name in df.columns:
+    tipo, escala = classificar_variavel(df[col_name])
+    dados_auto.append({
+        'Variável': col_name,
+        'Tipo inferido': tipo,
+        'Escala Inferida': escala
+    })
+
+pd.DataFrame(dados_auto)
 ```
 
 ## Resultados
@@ -54,9 +88,6 @@ predict_students_dropout_and_academic_success.variables.style.hide()
 ```{python}
 #| label: tbl-estatisticas
 #| tbl-cap: "Estatísticas Descritivas das Notas"
-
-# Definindo o df
-df = predict_students_dropout_and_academic_success.data.features
 
 # Calculando as estatísticas
 descritiva = df['Previous qualification (grade)'].describe()
