@@ -206,7 +206,7 @@
 <meta name="citation_reference" content="citation_title=Ucimlrepo: Package to easily import datasets from the UC Irvine Machine Learning Repository into scripts and notebooks.;,citation_fulltext_html_url=https://github.com/uci-ml-repo/ucimlrepo/tree/main;">
 <meta name="citation_reference" content="citation_title=Early Prediction of student’s Performance in Higher Education: A Case Study;,citation_author=Mónica V. Martins;,citation_author=Daniel Tolledo;,citation_author=Jorge Machado;,citation_author=Luís M. T. Baptista;,citation_author=Valentim Realinho;,citation_editor=Álvaro Rocha;,citation_editor=Hojjat Adeli;,citation_editor=Gintautas Dzemyda;,citation_editor=Fernando Moreira;,citation_editor=Ana Maria Ramalho Correia;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_fulltext_html_url=https://link.springer.com/10.1007/978-3-030-72657-7_16;,citation_doi=10.1007/978-3-030-72657-7_16;,citation_isbn=978-3-030-72656-0 978-3-030-72657-7;,citation_volume=1365;,citation_language=en-US;,citation_inbook_title=Trends and Applications in Information Systems and Technologies;">
 <meta name="citation_reference" content="citation_title=Matplotlib: Python plotting package;,citation_fulltext_html_url=https://matplotlib.org;">
-<meta name="citation_reference" content="citation_title=Pandas-dev/pandas: Pandas;,citation_author=The team;,citation_publication_date=2026-01;,citation_cover_date=2026-01;,citation_year=2026;,citation_fulltext_html_url=https://doi.org/10.5281/zenodo.18328522;,citation_doi=10.5281/zenodo.18328522;,citation_publisher=Zenodo;">
+<meta name="citation_reference" content="citation_title=Pandas-dev/pandas: Pandas;,citation_author=pandas Team;,citation_publication_date=2026-01;,citation_cover_date=2026-01;,citation_year=2026;,citation_fulltext_html_url=https://doi.org/10.5281/zenodo.18328522;,citation_doi=10.5281/zenodo.18328522;,citation_publisher=Zenodo;">
 </head>
 
   <body class="quarto-notebook quarto-light">
@@ -324,7 +324,7 @@
 <section id="materiais-e-métodos" class="level2">
 <h2 class="anchored" data-anchor-id="materiais-e-métodos">Materiais e Métodos</h2>
 <p>O dataset utilizado, <em>Predict Students’ Dropout and Academic Success</em> tem como origem o Instituto Politécnico de Portalegre (PP), Portugal <span class="citation" data-cites="martinsEarlyPredictionStudents2021">(<a href="#ref-martinsEarlyPredictionStudents2021" role="doc-biblioref">Martins et al., 2021, p. 167</a>)</span>. Os dados foram coletados desde 2008 até 2019 <span class="citation" data-cites="martinsEarlyPredictionStudents2021">(<a href="#ref-martinsEarlyPredictionStudents2021" role="doc-biblioref">Martins et al., 2021, p. 168</a>)</span>. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados. A tabela a seguir detalha as variáveis encontradas no <em>dataset</em>, e seus tipos.</p>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="c731ca87" class="cell" data-execution_count="1">
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="c4f44bda" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ucimlrepo <span class="im">import</span> fetch_ucirepo</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># fetch dataset</span></span>
@@ -619,7 +619,7 @@ Tabela&nbsp;1: Dicionário das Variáveis
 </figure>
 </div></div>
 </div></div>
-<div id="c6d19287" class="cell markdown">
+<div id="4a4902c4" class="cell markdown">
 <p>Para o processamento e análise dos dados mediante gráficos, foi utilizada a linguagem de programação Python <span class="citation" data-cites="python">(<a href="#ref-python" role="doc-biblioref">Python Software Foundation, 2025</a>)</span>. A tabela a seguir detalha as bibliotecas usadas, e suas utilidades.</p>
 <div id="tbl-libraries" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -644,7 +644,7 @@ Tabela&nbsp;2: Bibliotecas Utilizadas
 <td>Gerar gráficos a partir dos dados.</td>
 </tr>
 <tr class="even">
-<td>pandas <span class="citation" data-cites="the_pandas_development_team_2026_18328522">(<a href="#ref-the_pandas_development_team_2026_18328522" role="doc-biblioref">Team, 2026</a>)</span></td>
+<td>pandas <span class="citation" data-cites="the_pandas_development_team_2026_18328522">(<a href="#ref-the_pandas_development_team_2026_18328522" role="doc-biblioref">Pandas Team, 2026</a>)</span></td>
 <td>Manipular o <em>dataset</em>.</td>
 </tr>
 <tr class="odd">
@@ -676,45 +676,45 @@ Tabela&nbsp;3: Estatísticas Descritivas das Notas
 <style type="text/css">
 </style>
 
-<table id="T_9cb3a" class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<table id="T_e0658" class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
-<th id="T_9cb3a_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Previous qualification (grade)</th>
+<th id="T_e0658_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Previous qualification (grade)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<th id="T_9cb3a_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">count</th>
-<td id="T_9cb3a_row0_col0" class="data row0 col0">4424.00</td>
+<th id="T_e0658_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">count</th>
+<td id="T_e0658_row0_col0" class="data row0 col0">4424.00</td>
 </tr>
 <tr class="even">
-<th id="T_9cb3a_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">mean</th>
-<td id="T_9cb3a_row1_col0" class="data row1 col0">132.61</td>
+<th id="T_e0658_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">mean</th>
+<td id="T_e0658_row1_col0" class="data row1 col0">132.61</td>
 </tr>
 <tr class="odd">
-<th id="T_9cb3a_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">std</th>
-<td id="T_9cb3a_row2_col0" class="data row2 col0">13.19</td>
+<th id="T_e0658_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">std</th>
+<td id="T_e0658_row2_col0" class="data row2 col0">13.19</td>
 </tr>
 <tr class="even">
-<th id="T_9cb3a_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">min</th>
-<td id="T_9cb3a_row3_col0" class="data row3 col0">95.00</td>
+<th id="T_e0658_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">min</th>
+<td id="T_e0658_row3_col0" class="data row3 col0">95.00</td>
 </tr>
 <tr class="odd">
-<th id="T_9cb3a_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">25%</th>
-<td id="T_9cb3a_row4_col0" class="data row4 col0">125.00</td>
+<th id="T_e0658_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">25%</th>
+<td id="T_e0658_row4_col0" class="data row4 col0">125.00</td>
 </tr>
 <tr class="even">
-<th id="T_9cb3a_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">50%</th>
-<td id="T_9cb3a_row5_col0" class="data row5 col0">133.10</td>
+<th id="T_e0658_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">50%</th>
+<td id="T_e0658_row5_col0" class="data row5 col0">133.10</td>
 </tr>
 <tr class="odd">
-<th id="T_9cb3a_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">75%</th>
-<td id="T_9cb3a_row6_col0" class="data row6 col0">140.00</td>
+<th id="T_e0658_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">75%</th>
+<td id="T_e0658_row6_col0" class="data row6 col0">140.00</td>
 </tr>
 <tr class="even">
-<th id="T_9cb3a_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">max</th>
-<td id="T_9cb3a_row7_col0" class="data row7 col0">190.00</td>
+<th id="T_e0658_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">max</th>
+<td id="T_e0658_row7_col0" class="data row7 col0">190.00</td>
 </tr>
 </tbody>
 </table>
@@ -745,7 +745,7 @@ Figura&nbsp;1: Distribuição das Notas (Identificando Outliers)
 </div>
 </div>
 </div></div>
-<div id="4c12cc47" class="cell markdown">
+<div id="69674abf" class="cell markdown">
 <section id="análise-dos-resultados" class="level3">
 <h3 class="anchored" data-anchor-id="análise-dos-resultados">Análise dos Resultados</h3>
 <p>Com base na <strong>Tabela 1</strong>, observamos que a nota média de qualificação prévia dos alunos é de aproximadamente <strong>132.6 pontos</strong>, com uma mediana muito próxima (<strong>133.1</strong>), o que indica uma distribuição relativamente simétrica.</p>
@@ -775,11 +775,11 @@ MARTINS, Mónica V. <em>et al.</em> <a href="https://doi.org/10.1007/978-3-030-7
 <div id="ref-MatplotlibPythonPlotting" class="csl-entry" role="listitem">
 <strong>Matplotlib: <span>Python</span> Plotting Package</strong>., <em>[S.d.]</em>. Disponível em: &lt;<a href="https://matplotlib.org">https://matplotlib.org</a>&gt;. Acesso em: 28 jan. 2026
 </div>
+<div id="ref-the_pandas_development_team_2026_18328522" class="csl-entry" role="listitem">
+PANDAS TEAM. <strong>Pandas-Dev/Pandas: <span>Pandas</span></strong>. Zenodo, jan. 2026. Disponível em: &lt;<a href="https://doi.org/10.5281/zenodo.18328522">https://doi.org/10.5281/zenodo.18328522</a>&gt;
+</div>
 <div id="ref-python" class="csl-entry" role="listitem">
 PYTHON SOFTWARE FOUNDATION. <strong>Python Language Reference</strong>., 5 dez. 2025. Disponível em: &lt;<a href="https://www.python.org">https://www.python.org</a>&gt;
-</div>
-<div id="ref-the_pandas_development_team_2026_18328522" class="csl-entry" role="listitem">
-TEAM, The pandas development. <strong>Pandas-Dev/Pandas: <span>Pandas</span></strong>. Zenodo, jan. 2026. Disponível em: &lt;<a href="https://doi.org/10.5281/zenodo.18328522">https://doi.org/10.5281/zenodo.18328522</a>&gt;
 </div>
 <div id="ref-git" class="csl-entry" role="listitem">
 TORVALDS, Linus; HAMANO, Junio C.; GIT CONTRIBUTORS. <strong>Git: Distributed Version Control System</strong>., 17 nov. 2025. Disponível em: &lt;<a href="https://git-scm.com">https://git-scm.com</a>&gt;
