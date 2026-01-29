@@ -19,6 +19,7 @@ Durante a realização deste projeto, demonstramos conhecer:
 
 - [Python](https://www.python.org/).
 - [ucimlrepo](https://github.com/uci-ml-repo/ucimlrepo).
+- [matplotlib](https://matplotlib.org/).
 
 ## Competências Adicionais
 
