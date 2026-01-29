@@ -131,8 +131,8 @@ plt.show()
 #| label: fig-bar-divida
 #| fig-cap: Taxa de Evasão por Situação de Dívida
 
-com_divida = df[df['Target'] == 1]
-sem_divida = df[df['Target'] == 0]
+com_divida = df[df['Debtor'] == 1]
+sem_divida = df[df['Debtor'] == 0]
 
 taxa_com_divida = (com_divida['Target'] == 'Dropout').mean() * 100
 taxa_sem_divida = (sem_divida['Target'] == 'Dropout').mean() * 100
