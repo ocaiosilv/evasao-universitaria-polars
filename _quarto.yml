@@ -28,7 +28,11 @@ project:
 
 format:
   html: default
-  pdf: default
+  pdf:
+    linkcolor: blue
+    lof: true
+    lot: true
+    toc: true
   docx: default
 
 lang: pt
