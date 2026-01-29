@@ -128,6 +128,32 @@ plt.show()
 ```
 
 ```{python}
+#| label: fig-boxplot-desempenho
+#| fig-cap: Desempenho Acadêmico Inicial
+
+df['Situacao'] = df['Target'].apply(lambda x: 'Dropout' if x == 'Dropout' else 'Cursando/Formado')
+
+grupos = ['Dropout', 'Cursando/Formado']
+dados_plot = []
+
+for grupo in grupos:
+    filtro = df['Situacao'] == grupo
+    valores = df.loc[filtro, 'Curricular units 1st sem (grade)']
+    valores_limpos = valores[(valores >= 0) & (valores <= 20)]
+
+    dados_plot.append(valores_limpos)
+
+plt.figure(figsize=(10, 6))
+
+plt.boxplot(dados_plot, tick_labels=grupos, patch_artist=True, vert=False)
+plt.title('Notas do primeiro Semestre por Situação Final')
+plt.xlabel('Nota Média (0-20)')
+plt.ylabel('Situação Final')
+plt.grid(True, linestyle='--', alpha=0.3)
+plt.show()
+```
+
+```{python}
 #| label: fig-bar-divida
 #| fig-cap: Taxa de Evasão por Situação de Dívida
 
