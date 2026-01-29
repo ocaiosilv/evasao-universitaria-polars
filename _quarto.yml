@@ -23,6 +23,8 @@ execute:
 manuscript:
   article: index.qmd
 
+number-sections: true
+
 project:
   type: manuscript
 
