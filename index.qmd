@@ -183,7 +183,4 @@ Entretanto, o **Boxplot (@fig-boxplot-notas)** revela a presença clara de **out
 
 ## Relato Pessoal
 
-## Referências
-
-::: {#refs}
-:::
+## Referências {.unnumbered}
