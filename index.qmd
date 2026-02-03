@@ -99,6 +99,7 @@ Para o processamento e análise dos dados mediante gráficos, foi utilizada a li
 | matplotlib [@MatplotlibPythonPlotting]              | Gerar gráficos a partir dos dados.                                               |
 | pandas [@the_pandas_development_team_2026_18328522] | Manipular o *dataset*.                                                           |
 | ucimlrepo [@UcimlrepoPackageEasily]                 | Baixar o *dataset* pronto para manipulação do *UCI Machine Learning Repository*. |
+| numpy [@harris2020array]                            | Análise de tipos de dados.                                                       |
 
 : Bibliotecas Utilizadas {#tbl-libraries}
 
@@ -182,5 +183,13 @@ Entretanto, o **Boxplot (@fig-boxplot-notas)** revela a presença clara de **out
 ## Conclusão
 
 ## Relato Pessoal
+
+### Gabriel Santos de Souza
+
+Já havia previamente trabalhado com Python [@python] e CSV [@shafranovich2005common] na disciplina *Métodos e Técnicas de Pesquisa para Computação* (MTPC) então, em quesito de linguagem, não tive complicação.
+
+A novidade foi mexer com o Pandas [@the_pandas_development_team_2026_18328522], matplotlib [@MatplotlibPythonPlotting] e o Numpy [@harris2020array], pois em MTPC eu utilizei a biblioteca Polars [@PolarsBlazinglyFast] para análise dos dados e o Altair [@VanderPlas2018] para geração dos gráficos. Foi também uma ótima oportunidade de experimentar o Quarto [@quarto] como sucessor do R Markdown [@RmarkdownDynamicDocuments2025].
+
+Em relação aos dados em si, achei interessante como justificativas socioeconômicas se aplicam independentemente do país.
 
 ## Referências {.unnumbered}
