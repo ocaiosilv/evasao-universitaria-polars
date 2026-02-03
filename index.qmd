@@ -199,7 +199,7 @@ Além disso, a comparação das notas do primeiro semestre mostrou que os alunos
 
 Ao correlacionar as dimensões analisadas, observa-se a formação de um "efeito cascata" que potencializa a vulnerabilidade do discente. O aluno que ingressa com notas de qualificação mais baixas (preparo prévio deficitário) frequentemente enfrenta maiores obstáculos pedagógicos, o que se traduz em notas insatisfatórias logo no primeiro semestre. Quando esse quadro de dificuldade acadêmica é agravado pela situação de endividamento, a evasão deixa de ser uma possibilidade e torna-se um desfecho provável. A pressão financeira força o estudante a priorizar atividades remuneradas em detrimento do tempo de estudo, impedindo a recuperação de suas notas e criando um ciclo onde a insuficiência acadêmica e a fragilidade econômica se retroalimentam. Portanto, a análise revela que o risco de desistência não é fruto de um evento isolado, mas da convergência entre um histórico escolar prévio heterogêneo, um desempenho inicial abaixo da média e a barreira socioeconômica da dívida ativa.
 
-Em suma, este trabalho cumpriu o objetivo de resumir e organizar os dados , estabelecendo uma base empírica sólida para que a instituição possa validar a qualidade de suas estratégias de retenção e orientar futuras decisões metodológicas mais complexas.
+Em suma, este trabalho cumpriu o objetivo de resumir e organizar os dados, estabelecendo uma base empírica sólida para que a instituição possa validar a qualidade de suas estratégias de retenção e orientar futuras decisões metodológicas mais complexas.
 
 ## Relato Pessoal
 
@@ -213,7 +213,7 @@ Em relação aos dados em si, achei interessante como justificativas socioeconô
 
 ### Tarcisio Almeida Mascarenhas
 
-Uma das dificuldades que tive foi a de executar o código, tive alguns problemas com o python no R Studio, mas consegui resolver depois de algum tempo. Outra dificuldade seria escolher exatamente quais parâmetros usar dentre todos que existem no banco de dados já que uma grande parte deles se complementam entre si, então escolher quais filtrar para podermos provar o nosso ponto sobre o assunto foi bastante interessante de se pensar.
+Uma das dificuldades que tive foi a de executar o código, tive alguns problemas com o Python [@python] no R Studio [@rstudio2026], mas consegui resolver depois de algum tempo. Outra dificuldade seria escolher exatamente quais parâmetros usar dentre todos que existem no banco de dados já que uma grande parte deles se complementam entre si, então escolher quais filtrar para podermos provar o nosso ponto sobre o assunto foi bastante interessante de se pensar.
 
 Das novidades, uma delas foi mexer com Python [@python] e o R Studio [@rstudio2026], coisa que eu nunca tinha feito e achei bastante interessante a sinergia entre os dois, e a possibilidade de criar documentos como esse sem precisar ficar mudando de aplicativo durante a criação foi bem interessante, também achei bem legal a forma como a estatística e o senso comum andaram lado a lado nesse trabalho mostrando assim que ela também serve para provarmos aquilo que já sabemos de forma empírica, porém não temos dados para comprovar. Além disso, o fato das justificativas socioeconômicas se aplicarem tanto ao Brasil quanto a Portugal, países completamente diferentes em cultura, geografia, economia e desenvolvimento demonstra a possibilidade da situação analisada ser igual para o mundo todo.
 
