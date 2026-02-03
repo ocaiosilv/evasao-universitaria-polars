@@ -81,10 +81,11 @@ def classificar_variavel(coluna):
     return 'Outro', 'Outro'
 
 dados_auto = []
-for col_name in df.columns:
+for index, col_name in enumerate(df.columns):
     tipo, escala = classificar_variavel(df[col_name])
     dados_auto.append({
         'Variável': col_name,
+        'Descrição': ds.variables['description'][index],
         'Tipo inferido': tipo,
         'Escala Inferida': escala
     })
