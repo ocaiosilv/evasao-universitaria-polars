@@ -93,6 +93,82 @@ for index, col_name in enumerate(df.columns):
 pd.DataFrame(dados_auto)
 ```
 
+Como medida descritiva, foi utilizada principalmente a dispersão para análise, devido a sua capacidade de destacar potenciais *outliers*, que no caso desse estudo, seriam estudantes de baixo e alto rendimento acadêmico.
+
+Como métodos estatísticos, foram aplicadas as medidas de tendência central para a análise das notas de qualificações prévias dos alunos. As medidas de tendência central incluem:
+
+(@) **Média**
+
+Dada por:
+
+$$
+\overline{X} = \frac{\sum_{i=1}^{N} x_{i}}{N}
+$$
+
+Onde:
+
+$x_{i}$
+: Valor da observação $i$.
+
+$N$
+: Número de observações da amostra.
+
+(@) **Mediana**
+
+Dada por:
+
+$$
+M =
+\begin{cases}
+\frac{N}{2}, & N = 2k \\
+\frac{N + 1}{2}, & N = 2k + 1
+\end{cases}
+$$
+
+Onde:
+
+$N$
+: Número de observações da amostra.
+
+(@) **Moda**
+
+Geralmente é pensada como a observação de maior valor, mas podemos usar a **Fórmula de King** para calculá-la:
+
+$$
+M_{o} = L_{i} + \frac{n_{i} + 1}{n_{i} - 1 + n_{i} + 1} \cdot a_{i}
+$$
+
+Onde:
+
+$L_{i}$
+: Limite inferior da classe modal.
+
+$n_{i} + 1$
+: Frequência absoluta da clase posterior à classe modal.
+
+$n_{i} - 1$
+: Frequência absoluta da classe anterior à classe modal.
+
+$a_{i}$
+: Amplitude da classe modal.
+
+Além das medidas de tendência central, foi aplicada a medida de dispersão **desvio padrão** para identificar a variabilidade dos dados. Ela é dada por:
+
+$$
+DP = \sqrt{\frac{\sum_{i = 1}^{N} (x_{i} - \overline{X})^{2}}{N}}
+$$
+
+Onde:
+
+$x_{i}$
+: Valor da observação $i$.
+
+$\overline{X}
+: Média das observações da amostra.
+
+$N$
+: Número de observações da amostra.
+
 Para o processamento e análise dos dados mediante gráficos, foi utilizada a linguagem de programação Python [@python]. A tabela a seguir detalha as bibliotecas usadas, e suas utilidades.
 
 | Biblioteca                                          | Função                                                                           |
@@ -208,7 +284,7 @@ Em suma, este trabalho cumpriu o objetivo de resumir e organizar os dados, estab
 
 Já havia previamente trabalhado com Python [@python] e CSV [@shafranovich2005common] na disciplina *Métodos e Técnicas de Pesquisa para Computação* (MTPC) então, em quesito de linguagem, não tive complicação.
 
-A novidade foi mexer com o Pandas [@the_pandas_development_team_2026_18328522], matplotlib [@MatplotlibPythonPlotting] e o Numpy [@harris2020array], pois em MTPC eu utilizei a biblioteca Polars [@PolarsBlazinglyFast] para análise dos dados e o Altair [@VanderPlas2018] para geração dos gráficos. Foi também uma ótima oportunidade de experimentar o Quarto [@quarto] como sucessor do R Markdown [@RmarkdownDynamicDocuments2025].
+A novidade foi mexer com o Pandas [@the_pandas_development_team_2026_18328522], Matplotlib [@MatplotlibPythonPlotting] e o NumPy [@harris2020array], pois em MTPC eu utilizei a biblioteca Polars [@PolarsBlazinglyFast] para análise dos dados e o Altair [@VanderPlas2018] para geração dos gráficos. Foi também uma ótima oportunidade de experimentar o Quarto [@quarto] como sucessor do R Markdown [@RmarkdownDynamicDocuments2025].
 
 Em relação aos dados em si, achei interessante como justificativas socioeconômicas se aplicam independentemente do país.
 
